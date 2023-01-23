@@ -1,0 +1,210 @@
+
+
+
+
+  <app-aframe-screen-board>
+
+  </app-aframe-screen-board>
+
+
+<a-scene
+
+*ngIf="this.showHall == true"
+class="inicio animate__animated animate__fadeIn"
+id="project"
+project
+background="color: #212"
+
+
+renderer="colorManagement: true;"
+webxr="referenceSpaceType: local"
+
+>
+<!-- cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable; direction: -0.5312115213521734 -0.2926078531467218 -0.7951068883235611; origin: -0.4692367464282145 9.845696366465779 13.143716133988486" -->
+<!-- embedded -->
+
+
+
+<a-assets aassets id="aAssets1" timeout="50000">
+
+  <img id="room1" src="./assets/files/images//hall/begin/lob1.jpg" crossorigin="anonymous"/>
+
+
+  <!-- objetos -->
+  <img id="pcorona" src="./assets/files/elements/objects/stands/pcorona.png" crossorigin="anonymous"/>
+  <img id="pcuervo" src="./assets/files/elements/objects/stands/pcuervo.png" crossorigin="anonymous"/>
+  <img id="pbeckham" src="./assets/files/elements/objects/stands/pbeckhann.png" crossorigin="anonymous"/>elementos/objects  <!-- modelos 3d -->
+  <!-- <a-asset-item id="screenModel" src="./assets/files/3dmodel/screen-stand/screenStand.fbx"  crossorigin="anonymous"></a-asset-item> -->
+
+
+   <a-mixin
+   id="arrowLocationMixin"
+   geometry="primitive: plane; width: 0.5; height: 1.2"
+   material="color: transparent; shader: flat; side: double"
+   animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+   animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+   >
+   </a-mixin>
+
+  <!--  -->
+  <a-mixin
+    id="frame"
+    geometry="primitive: plane; width: 3.6; height: 5.1"
+    material="color: white; shader: flat"
+    animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+    animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+   ></a-mixin>
+   <a-mixin
+    id="poster"
+    geometry="primitive: plane; width: 3.5; height: 5"
+    material="color: white; shader: flat"
+    material="shader: flat"
+    position="0 0 0.005"
+   ></a-mixin>
+   <a-mixin
+    id="movieImage"
+    geometry="primitive: plane; width: 1.5; height: 0.81"
+    material="src: #ponyo; shader: flat; transparent: true"
+    position="0 0.495 0.002"
+   ></a-mixin>
+
+
+
+</a-assets>
+
+
+<a-sky position="0 0 0" id="skybox"  scale="-0.045 0.045 0.045" src="#room1"></a-sky>
+<!-- <a-sky id="skybox"  src="#room1"></a-sky> -->
+
+<a-entity  id="luz1" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 2" position="-14.70455 10 0"></a-entity>
+<a-entity  id="luz2" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 2" position="14.5 10.09939 0.02139"></a-entity>
+<a-entity  id="luz3" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 2" position="-1 10 -16.54709"></a-entity>
+<a-entity  id="luz4" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 2" position="-1 10 15.87778"></a-entity>
+
+
+<a-cylinder position="0 0 0" radius="0.25" height="0.1" color="#FFC65D"></a-cylinder>
+
+
+<a-entity
+  id="background"
+  position="0 0 0"
+  geometry="primitive: sphere; radius: 2.0"
+  material="color: red; side: back; shader: flat"
+  scale="0.001 0.001 0.001"
+  visible="false" class="raycastable">
+</a-entity>
+
+
+
+
+<!-- <a-entity id="screens3D">
+
+  <a-entity id="screens-room1" position="-7.64867 -2 -0.30011">
+
+     <a-entity id="stand3d11" gltf-model="./assets/files/3dmodel/screen-stand/vaya3d.gltf"  crossorigin="anonymous"></a-entity>
+
+  </a-entity>
+
+</a-entity> -->
+
+
+<a-entity id="objetsSignals" objetsSignals position="0 0 0">
+
+  <a-entity class="scenario1" id="screens-room1" position="0 0 0">
+
+    <a-entity id="objs_entity11" position="-5.89979 -2 -5.67826" rotation="0 -2.968494336572795 0">
+
+
+      <a-entity  spot="linkto:menuBack;type:url" id="objectSignal11" rotation="0.002864788975654116 142.56106675327092 0.0005729577951308233" position="0 0 0" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/horizontal-screen/pantalla3dMenu.gltf" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+
+    </a-entity>
+
+</a-entity>
+
+</a-entity>
+
+
+<a-entity id="screenStands" screenStands position="0 0 0">
+
+  <a-entity class="scenario1" id="screens-room1" position="0 0 0">
+
+    <a-entity id="sc_entity11" position="7.98674 -2 -19.70393" rotation="0 88.6634999231095 0">
+
+      <a-entity  id="screen11" rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233" position="0 0 0" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/Rojo3dMundoCuervo/PantallarojoMundoCuervo.gltf" spot="linkto:uberEats;type:url" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+      <a-entity  id="screen12" rotation="-0.0011459155902616466 -40.3946704723133 0" position="-1.62357 0 2.57277" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/Rojo3dMundoCuervo/PantallarojoMundoCuervo.gltf" spot="linkto:uberEats;type:url" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+
+    </a-entity>
+
+    <a-entity id="sc_entity12" position="-17.06663 -2 11.94884" rotation="0 -113.63300063491079 0">
+
+      <a-entity  id="screen13" rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233" position="0 0 0" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/Rojo3dCorona/Pantallarojo.gltf" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+      <a-entity  id="screen14" rotation="-0.0011459155902616466 -40.3946704723133 0" position="-1.62357 0 2.57277" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/Rojo3dCorona/Pantallarojo.gltf" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+
+    </a-entity>
+
+
+    <a-entity id="sc_entity13" position="-17.42034 -2 -8.21577" rotation="0 -164.44289790711218 0">
+
+      <a-entity  id="screen15" rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233" position="0 0 0" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/EstudioRojo3d/pantallaCorona3d.gltf" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+
+
+    </a-entity>
+
+    <a-entity id="sc_entity14" position="-11.38863 -2 -15.48559" rotation="0 142.42355688243953 0">
+
+      <a-entity  id="screen16" rotation="0.002864788975654116 -33.63949806772089 0.0005729577951308233" position="0 0 0" scale="0.5 2 1.8" gltf-model="./assets/files/3dmodel/stands/EstudioRojo3d/pantallaCorona3d.gltf" renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;" ></a-entity>
+
+
+    </a-entity>
+
+  </a-entity>
+
+</a-entity>
+
+  <a-entity id="doors" doors position="0 -0.5 0">
+
+
+
+
+</a-entity>
+
+
+
+
+
+<a-entity
+rotation="-4.010704565915763 72.07809062745757 0" camara id="cam" camera="fov:80" position="0 1 0" universal-controls kinematic-body="radius:0.5" wasd-controls look-controls="pointerLockEnabled: true;" mouse-cursor
+          animation__zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
+          animation__zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;">
+
+  <a-entity id="cursor-visual" cursor="fuse:true;fuseTimeout:2000"
+            material="shader:flat;color:#09B4FF"
+            position="-0.14726 0.14149 -1.79561"
+
+            geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015;thetaLength:0"
+            animation__mouseenter="property: geometry.thetaLength; dir: alternate; dur: 2000;
+                          easing: easeInSine; from:0;to: 360;startEvents:startFuse;pauseEvents:stopFuse;autoplay:false"
+
+            animation__mouseleave="property: geometry.thetaLength; dir: alternate; dur: 500;
+                          easing: easeInSine; to: 0;startEvents:stopFuse;autoplay:false">
+    <a-entity geometry="primitive:ring;radiusOuter:0.015;radiusInner:0.01" scale="2 2 2" material="shader:flat;color:#000000"></a-entity>
+  </a-entity>
+
+   <a-plane id="camfadeplane" rotation="10 0.5 0" position="0 0 -0.5" material="color:#000000;transparent:true;opacity:0" width="2" height="2"
+  animation__fadein="property:material.opacity;to:1;dur:2000;startEvents:camFadeIn"
+  animation__fadeout="property:material.opacity;to:0;dur:200;startEvents:camFadeOut"></a-plane>
+
+
+</a-entity>
+
+
+
+
+
+</a-scene>
+
+
+
+
+
+

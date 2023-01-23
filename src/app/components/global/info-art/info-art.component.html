@@ -1,0 +1,41 @@
+
+
+
+<div class="infoArt">
+
+
+    <div
+    *ngIf="this.info != null"
+    class="columns container">
+
+    <div class="row">
+
+        <div class="fileMaterial col-md-12 col-lg-6">
+
+            <img [src]="this.info.img" alt="">
+
+        </div>
+
+        <div class="infoMaterial col-md-12 col-lg-6">
+
+            <div class="title">
+                <h6>
+                    {{ this.info.title }}
+                </h6>
+            </div>
+
+            <div class="desc">
+
+                <p>
+                    {{ this.info.desc }}
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</div>

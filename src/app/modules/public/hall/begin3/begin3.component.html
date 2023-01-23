@@ -1,0 +1,139 @@
+<!-- <a-scene
+class="inicio animate__animated animate__fadeIn"
+[ngClass]="{'hide': ( this.show == false )? true: false}"
+
+>
+
+
+  <a-sky
+  [ngClass]="{'hide': ( this.show == false )? true: false}"
+  src="./assets/files/images//hall/begin/3.jpg" rotation="0 0 0"></a-sky> -->
+
+<!-- </a-scene> -->
+
+
+
+
+<a-scene
+class="inicio animate__animated animate__fadeIn"
+[ngClass]="{'hide': ( this.show == false )? true: false}"
+background="color: #212"
+webxr="referenceSpaceType: local"
+environment
+cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
+info-message="htmlSrc: #messageText">
+<a-assets>
+  <!-- <a-asset-item id="messageText" src="message.html"></a-asset-item> -->
+  <!--
+    Image source: http://www.ghibli.jp/works/kazetachinu/#frame&gid=1&pid=1
+    Image author: Studio Ghibli
+  -->
+  <img id="skySector" src="./assets/files/images//museum/3.jpg" crossorigin="anonymous"/>
+  <img id="nancy" src="https://pbs.twimg.com/profile_images/527058117503090689/zGXP05WD.jpeg" crossorigin="anonymous"/>
+  <img id="placido" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Concierto_de_Pl%C3%A1cido_Domingo_con_motivo_del_A%C3%B1o_Jubilar_Mariano_%287-06-2019%29_01.jpg" crossorigin="anonymous"/>
+  <img id="zarzuela" src="https://lh3.googleusercontent.com/proxy/yZapTFOIviKeh5i74RXq1VxzJ823UzB1wTGZUx8M85rVtOz5kdeMx43qA5-Mu8D7EwhgAf68uZDXkzW5QI7jb-Nz2em1jtT2RpsnJL1hC34" crossorigin="anonymous"/>
+
+
+
+  <img id="kazetachinu" src="https://cdn.aframe.io/examples/ui/kazetachinu.jpg" crossorigin="anonymous"/>
+  <img id="kazetachinuPoster" src="https://cdn.aframe.io/examples/ui/kazetachinuPoster.jpg" crossorigin="anonymous"/>
+  <!--
+    Image source: http://www.ghibli.jp/works/ponyo/#frame&gid=1&pid=36
+    Image author: Studio Ghibli
+  -->
+  <img id="ponyo" src="https://cdn.aframe.io/examples/ui/ponyo.jpg" crossorigin="anonymous"/>
+  <img id="ponyoPoster" src="https://cdn.aframe.io/examples/ui/ponyoPoster.jpg" crossorigin="anonymous"/>
+  <!--
+    Image source: http://www.ghibli.jp/works/karigurashi/#frame&gid=1&pid=32
+    Image author: Studio Ghibli
+  -->
+  <img id="karigurashi" src="https://cdn.aframe.io/examples/ui/karigurashi.jpg" crossorigin="anonymous"/>
+  <img id="karigurashiPoster" src="https://cdn.aframe.io/examples/ui/karigurashiPoster.jpg" crossorigin="anonymous"/>
+
+
+  <a-mixin
+    id="frame"
+    geometry="primitive: plane; width: 3.6; height: 5.1"
+    material="color: white; shader: flat"
+    animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+    animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+   ></a-mixin>
+   <a-mixin
+    id="poster"
+    geometry="primitive: plane; width: 3.5; height: 5"
+    material="color: white; shader: flat"
+    material="shader: flat"
+    position="0 0 0.005"
+   ></a-mixin>
+   <a-mixin
+    id="movieImage"
+    geometry="primitive: plane; width: 1.5; height: 0.81"
+    material="src: #ponyo; shader: flat; transparent: true"
+    position="0 0.495 0.002"
+   ></a-mixin>
+
+
+
+</a-assets>
+
+
+
+
+<a-sky
+[ngClass]="{'hide': ( this.show == false )? true: false}"
+ material="src: #skySector"
+ ></a-sky>
+
+<a-cylinder position="0 1 0" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+
+
+<a-entity
+  id="background"
+  position="0 0 0"
+  geometry="primitive: sphere; radius: 2.0"
+  material="color: red; side: back; shader: flat"
+  scale="0.001 0.001 0.001"
+  visible="false" class="raycastable">
+</a-entity>
+
+<!-- camara -->
+<a-entity
+  id="camara" rotation="51.30779759617009 -134.87311905820553 41.56923395233149"
+  position="0 5 0"
+  rotation= "-25.43932610380855 9.153000777214901 0"
+  camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
+  <a-entity
+    id="fadeBackground" rotation="-0.5826980776480473 30.33066680084039 2.148591731740587"
+    geometry="primitive: sphere; radius: 2.5"
+    material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
+  </a-entity>
+</a-entity>
+
+
+<a-entity id="ui" rotation="0 -0.008594366926962348 0" position="-1.82502 3.75856 -0.00245">
+  <!-- Poster menu -->
+  <a-entity id="menu" position="0.59746 0 0.33778" highlight>
+
+    <a-entity id="art1" rotation="0 40 0" position="-2.64824 2 -6.881" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #nancy;" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity id="art2" rotation="0 -70 0" position="8.06727 2 -2.80956" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #placido" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity  id="art3" position="-5.59102 1 6.62423" mixin="frame" class="raycastable menu-button"  rotation="0 90 0">
+      <a-entity  material="src: #zarzuela" mixin="poster" ></a-entity>
+    </a-entity>
+
+
+
+  </a-entity>
+
+
+</a-entity>
+
+
+</a-scene>
+
+

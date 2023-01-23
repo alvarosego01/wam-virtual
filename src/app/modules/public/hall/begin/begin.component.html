@@ -1,0 +1,937 @@
+<a-scene
+  *ngIf="this.showHall == true"
+  id="project"
+  raycaster="direction: -0.8943443549351866 -0.4371620785303717 -0.09506572405746469; origin: 33.462142041774314 29.531055779619802 26.460132471633557"
+  project
+  cursor="rayOrigin: mouse; fuse: false"
+  color-space="sRGB"
+  renderer="colorManagement: true, physicallyCorrectLights: true"
+  physics
+>
+  <a-assets aassets id="aAssets1" timeout="50000">
+    <img
+      id="room1"
+      src="./assets/files/images//hall/begin/lob1.jpg"
+      crossorigin="anonymous"
+    />
+
+    <!-- objetos -->
+    <img
+      id="pcorona"
+      src="./assets/files/elements/objects/stands/pcorona.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="pcuervo"
+      src="./assets/files/elements/objects/stands/pcuervo.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="pbeckham"
+      src="./assets/files/elements/objects/stands/pbeckhann.png"
+      crossorigin="anonymous"
+    />
+
+    <img
+      id="logobecknnamLarge"
+      src="./assets/files/elements/advertising/opera-studio-becknam/operaStudio.jpg"
+      crossorigin="anonymous"
+    />
+    <img
+      id="logobecknammSquare"
+      src="./assets/files/elements/advertising/opera-studio-becknam/operaStudioSquare.jpg"
+      crossorigin="anonymous"
+    />
+
+    <img
+      id="logoZarzuelaLarge"
+      src="./assets/files/elements/advertising/zarzuelaporelmundo/zarzuelaBanderin.jpg"
+      crossorigin="anonymous"
+    />
+    <img
+      id="logoZarzuelaSquare"
+      src="./assets/files/elements/advertising/zarzuelaporelmundo/zarzuelasquare.jpg"
+      crossorigin="anonymous"
+    />
+
+    <!-- señalizadores -->
+    <img
+      id="imgSignalarrow"
+      src="./assets/files/elements/objects/signals/arrow.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="imgSignalarrowSmall"
+      src="./assets/files/elements/objects/signals/arrowSmall.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="imgSignalbigPoster"
+      src="./assets/files/elements/objects/signals/bigPoster.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="imgSignalflag"
+      src="./assets/files/elements/objects/signals/flag.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="imgSignalmediumPoster"
+      src="./assets/files/elements/objects/signals/mediumPoster.png"
+      crossorigin="anonymous"
+    />
+    <img
+      id="imgSignalsmallPoster"
+      src="./assets/files/elements/objects/signals/smallPoster.png"
+      crossorigin="anonymous"
+    />
+
+    <!-- elementos 3d -->
+    <!-- plata agave -->
+    <a-asset-item
+      id="_element_agave"
+      src="./assets/files/3dmodel/others/agave/agave.gltf"
+    ></a-asset-item>
+
+    <!-- botellas jc -->
+    <a-asset-item
+      id="_element_botella_jc1"
+      src="./assets/files/3dmodel/others/tequila/GLTF.gltf"
+    ></a-asset-item>
+
+    <!-- kioskos -->
+    <a-asset-item
+      id="_element_kiosko"
+      src="./assets/files/3dmodel/stands/kiosko/ChiringuitoFinalColor.gltf"
+    ></a-asset-item>
+
+    <!-- pantallas -->
+    <a-asset-item
+      id="_element_mundoCuervo"
+      src="./assets/files/3dmodel/stands/Rojo3dMundoCuervo/PantallarojoMundoCuervo.gltf"
+    ></a-asset-item>
+    <a-asset-item
+      id="_element_corona"
+      src="./assets/files/3dmodel/stands/Rojo3dCorona/Pantallarojo.gltf"
+    ></a-asset-item>
+    <a-asset-item
+      id="_element_beckmann"
+      src="./assets/files/3dmodel/stands/EstudioRojo3d/pantallaCorona3d.gltf"
+    ></a-asset-item>
+    <!-- pantalla transparent -->
+    <a-asset-item
+      id="_element_transparentScreen"
+      src="./assets/files/3dmodel/stands/horizontal-screen/PantallaMenuRojaTransparente.gltf"
+    ></a-asset-item>
+
+    <!-- signals 3D -->
+    <a-asset-item
+      id="_signal_wall"
+      src="./assets/files/3dmodel/signals/signal_wall/Recurso1.gltf"
+    ></a-asset-item>
+    <a-asset-item
+      id="_signal_top"
+      src="./assets/files/3dmodel/signals/signal_top/Recurso2_techo.gltf"
+    ></a-asset-item>
+    <a-asset-item
+      id="_signal_poster_small"
+      src="./assets/files/3dmodel/signals/signal_poster_small/Recurso12.gltf"
+    ></a-asset-item>
+    <a-asset-item
+      id="_signal_poster_big"
+      src="./assets/files/3dmodel/signals/signal_poster_big/recurso5.gltf"
+    ></a-asset-item>
+    <a-asset-item
+      id="_signal_flag"
+      src="./assets/files/3dmodel/signals/signal_flag/recurso6.gltf"
+    ></a-asset-item>
+
+    <!-- videos -->
+    <!-- video beckmann -->
+    <video
+      id="videoBecknamm"
+      loop
+      crossorigin="anonymous"
+      playsinline=""
+      webkit-playsinline=""
+      preload="metadata"
+    >
+      <source
+        src="./assets/files/elements/video/OperaStudioBeckmann.mp4"
+        type="video/mp4"
+      />
+      <!-- <source src="https://www.dailymotion.com/embed/video/x7zbufr" type="video/mp4"> -->
+    </video>
+
+    <!-- video de zarzuela -->
+    <video
+      id="videoZarzuela"
+      loop
+      crossorigin="anonymous"
+      playsinline=""
+      webkit-playsinline=""
+      preload="metadata"
+    >
+      <source
+        src="./assets/files/elements/video/nancy.mp4"
+        type="video/mp4"
+      />
+      <!-- <source src="https://www.dailymotion.com/embed/video/x7zbufr" type="video/mp4"> -->
+    </video>
+
+    <!-- elements menu -->
+    <!-- menu 3d -->
+
+    <a-asset-item
+      id="_menu_interface3D"
+      src="./assets/files/3dmodel/menu_interface/Menu3d.gltf"
+    ></a-asset-item>
+
+    <img
+      id="closeMenuInterface"
+      src="./assets/files/elements/icon/times-solid.png"
+      crossorigin="anonymous"
+    />
+
+    <!-- <img id="_menu_elementFatherCircle" src="./assets/files/elements/digital-menu/facircle2.png" crossorigin="anonymous"> -->
+  </a-assets>
+
+  <!-- cielo -->
+  <a-sky
+    position="0 1 0.12085"
+    id="skybox"
+    rotation="0 0 0"
+    scale="-0.055 0.055 0.055"
+    src="#room1"
+  ></a-sky>
+
+  <!-- luces (DE PRUEBA) -->
+  <a-entity
+    id="luz1"
+    scale="7.5 7.5 7.5"
+    light="color: #FFF; intensity: 1.5"
+    position="-14.70455 5 0"
+  ></a-entity>
+  <a-entity
+    id="luz2"
+    scale="7.5 7.5 7.5"
+    light="color: #FFF; intensity: 1.5"
+    position="14.5 5.09939 0.02139"
+  ></a-entity>
+  <a-entity
+    id="luz3"
+    scale="7.5 7.5 7.5"
+    light="color: #FFF; intensity: 1.5"
+    position="-1 5 -16.54709"
+  ></a-entity>
+  <a-entity
+    id="luz4"
+    scale="7.5 7.5 7.5"
+    light="color: #FFF; intensity: 1.5"
+    position="-1 5 15.87778"
+  ></a-entity>
+
+  <a-plane
+    id="ground"
+    static-body="sphereRadius: 28"
+    static-body
+    material="opacity: 0.0; transparent: true"
+    width="100"
+    height="100"
+    rotation="-90 0 0"
+    position="0 -2 0"
+  ></a-plane>
+  <!-- <a-box dynamic-body="mass: 1" position="0 0 0" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+<a-box width="10" height="5" depth="0.5" static-body material="color: red" position="0 0 -5" shadow></a-box> -->
+
+  <!-- <a-cylinder static-body position="0 -2 0" radius="0.25" height="0.1" color="#FFC65D" shadow></a-cylinder> -->
+
+  <a-entity id="objetsSignals" objetsSignals position="0 0 0">
+    <a-entity class="scenario1" id="screens-room1" position="0 0 0">
+      <a-entity
+        id="objs_entity11"
+        position="4.43614 -2 -0.04333"
+        rotation="0 0 0"
+      >
+        <a-gltf-model
+          #screenMenu
+          static-body
+          id="objectSignal11"
+          static-body="sphereRadius: NaN"
+          static-body
+          rotation="0.002864788975654116 0 0.0005729577951308233"
+          position="0 0 0"
+          scale="0.012 0.065 0.065"
+          src="#_element_transparentScreen"
+          renderer="antialias: true;
+      colorManagement: true;
+      physicallyCorrectLights: true;"
+          material="opacity: 1"
+          animation__fade_out="property: material.opacity;from: 1; to: 0; dur: 500; startEvents: outscreen"
+          animation__up_out="property: position; to: 0 -100 0; dur: 500; startEvents: outscreen"
+          animation__visible_out="property: visible;from: true; to: true; dur: 500; startEvents: outscreen"
+          animation__fade_in="property: material.opacity ;from: 0; to: 1; dur: 500; startEvents: inscreen"
+          animation__up_in="property: position; from: 0 -10 0; to: 0 0 0; dur: 500; startEvents: inscreen"
+          animation__visible_in="property: visible;from: false; to: true; dur: 10; startEvents: inscreen"
+        >
+          <a-entity
+            id="sideClicksScreenTransparent"
+            position="0.00031 32.64359 -0.00153"
+          >
+            <a-box
+              (click)="this.openNgModal('menu3D')"
+              id="sideClickPanelTransparentScreen_1"
+              geometry="width: 1.25; height: 1.25; primitive: box; depth: 0.5"
+              scale="15 15 15"
+              rotation="179.9998479605043 -88.11804410214495 179.9998479605043"
+              position="-13.21914 1.00723 -17.40942"
+              class="clickeable"
+              goclick
+              material="opacity: 0; transparent: true"
+            >
+            </a-box>
+
+            <a-box
+              (click)="this.openNgModal('helpMenu')"
+              id="sideClickPanelTransparentScreen_2"
+              geometry="width: 1.25; height: 1.25; primitive: box; depth: 0.5"
+              scale="15 15 15"
+              rotation="179.9998479605043 -88.11804410214495 179.9998479605043"
+              position="-12.34938 0.00107 19.92754"
+              class="clickeable"
+              goclick
+              material="opacity: 0; transparent: true"
+            >
+            </a-box>
+
+            <!-- <a-plane id="sideClickPanelTransparentScreen_2"  class="clickeable" goclick material="opacity: 1.0; transparent: false"> </a-plane> -->
+          </a-entity>
+        </a-gltf-model>
+
+        <a-entity
+          #menu3D
+          menu_3d_interface
+          id="floatMenuElementTransparentScreen"
+          scale="1 1 1"
+          position="0.5 0 0"
+          rotation="0 90 0"
+          visible="false"
+          material="opacity: 0"
+          animation__fade_out="property: material.opacity;from: 1; to: 0; dur: 500; startEvents: outmenu"
+          animation__up_out="property: position; to: 0 -100 0; dur: 500; startEvents: outmenu"
+          animation__visible_out="property: visible;from: true; to: true; dur: 10; startEvents: outmenu"
+          animation__fade_in="property: material.opacity ;from: 0; to: 1; dur: 500; startEvents: inmenu"
+          animation__up_in="property: position; from: 0 -10 0; to: 0 0.5 0; dur: 500; startEvents: inmenu"
+          animation__visible_in="property: visible;from: false; to: true; dur: 10; startEvents: inmenu"
+        >
+          <!-- <a-box id="_baseFondo" geometry="width: 5.5; height: 5.5; primitive: box; depth: 0.001" scale="1 1 1" rotation="0 -175.3623275667154 0" position="0 2.13997 0.53952"  class="clickeable" material="opacity: 0; transparent: true"> </a-box> -->
+
+          <a-gltf-model
+            position="0 0 0"
+            scale="0.18 0.18 0.18"
+            id="containMenuFloating"
+            src="#_menu_interface3D"
+          >
+            <a-entity
+              id="_panelSelector_menu3D"
+              rotation="-179.9998479605043 -180 -179.9998479605043"
+              position="0 11.16808 0"
+            >
+              <a-image
+                (click)="this.openNgModal('menu3D')"
+                goclick
+                position="11.01305 12.90423 -0.00002"
+                id="_panelCloseMenu"
+                geometry="height: 3.5; width: 3.5"
+                scale="1 1 1"
+                rotation="0 -180 0"
+                material="src: #closeMenuInterface"
+                class="clickeable"
+              ></a-image>
+
+              <a-box
+                goclick
+                spot="linkto:gopromo ;type:url"
+                id="_panelSelector_menu3D_1"
+                geometry="width: 6; height: 6; primitive: box; depth: 0.5"
+                scale="1 1 1"
+                rotation="0 0 0"
+                position="-9.61168 10.27086 -0.72921"
+                class="clickeable"
+                material="opacity: 0; transparent: true"
+              >
+              </a-box>
+
+              <!-- (click)="this.openNgModal('menu3D')" -->
+              <a-box
+                goclick
+                spot="linkto:gomundozarzuela ;type:url"
+                id="_panelSelector_menu3D_2"
+                geometry="width: 4.5; height: 4.5; primitive: box; depth: 0.5"
+                scale="1 1 1"
+                rotation="0 0 0"
+                position="-10.50122 -6.12783 -0.38602"
+                class="clickeable"
+                material="opacity: 0; transparent: true"
+              >
+              </a-box>
+            </a-entity>
+          </a-gltf-model>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="objs_entity12" position="0 -2 0" rotation="0 0 0">
+        <a-entity id="objs_signals_1" class="walls" position="0 0 0">
+          <a-gltf-model
+            static-body
+            position="6.1548 3.0349 -26.27873"
+            id="objs_signals_1_1"
+            scale="0.25 0.25 0.1"
+            rotation="0 -101.31899170195913 0"
+            src="#_signal_wall"
+          ></a-gltf-model>
+
+          <a-gltf-model
+            static-body
+            position="-26.75377 4.05038 -3.60823"
+            id="objs_signals_1_2"
+            scale="0.25 0.25 0.1"
+            rotation="0 -4.770446602259234 0"
+            src="#_signal_wall"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity id="objs_signals_2" class="top" position="0 7.5 0">
+          <a-gltf-model
+            position="-16.66154 0 1.15034"
+            id="objs_signals_2_1"
+            scale="0.25 1.5 1.5"
+            rotation="0 -90 0"
+            src="#_signal_top"
+          ></a-gltf-model>
+          <a-gltf-model
+            position="-1.42261 0 -11.13346"
+            id="objs_signals_2_2"
+            scale="0.25 1.5 1.5"
+            rotation="0 180 0"
+            src="#_signal_top"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity id="objs_signals_3" class="posters" position="0 0 0">
+          <a-gltf-model
+            static-body
+            position="4.34193 0 -5.78059"
+            id="objs_signals_3_1"
+            scale="0.025 0.025 0.01"
+            rotation="0 -90 0"
+            src="#_signal_poster_small"
+          ></a-gltf-model>
+
+          <a-gltf-model
+            static-body
+            position="-22.04019 0 9.43374"
+            id="objs_signals_3_3"
+            static-body="sphereRadius: NaN"
+            scale="0.55 0.45 0.1"
+            rotation="0 117.12918910079907 0"
+            src="#_signal_poster_big"
+          ></a-gltf-model>
+        </a-entity>
+
+        <a-entity id="objs_signals_4" class="flags" position="0 0 0">
+          <a-gltf-model
+            static-body
+            position="-22.98111 0 -7.74604"
+            id="objs_signals_4_1"
+            static-body="sphereRadius: NaN"
+            scale="0.05 0.035 0.004"
+            rotation="0 52.8731182924675 0"
+            src="#_signal_flag"
+          ></a-gltf-model>
+        </a-entity>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+  <a-entity id="objectInteract" objectInteract position="0 0 0">
+    <a-entity class="scenario1" id="objectInteract-room1" position="0 0 0">
+      <a-entity
+        id="objectInteract_entity13"
+        position="-12.39296 -2 15.7424"
+        rotation="0 -2.968494336572795 0"
+      >
+        <!-- kiosko -->
+        <a-gltf-model
+          static-body
+          id="objectInteract13"
+          static-body="sphereRadius: NaN"
+          static-body
+          rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
+          position="0 0 0"
+          scale="1.5 1.5 1.5"
+          src="#_element_kiosko"
+        ></a-gltf-model>
+
+        <!-- logo frontal -->
+        <a-entity
+          id="assetsObjectsInteract132"
+          scale="1 1 1"
+          position="-0.15358 1.42714 -1.82278"
+        >
+          <a-image
+            position="0 0 0"
+            id="imageObjectInteract133"
+            scale="2 2 2"
+            rotation="0 -174.86557315833699 0"
+            material="src: #logobecknammSquare"
+          ></a-image>
+        </a-entity>
+
+        <!-- pendones -->
+        <a-entity
+          id="assetsObjectsInteract131"
+          rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
+          position="0 2.784 0"
+        >
+          <a-image
+            position="0.06116 -4.69823 0.98954"
+            id="imageObjectInteract131"
+            scale="4.25 1.25 1"
+            rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
+            material="src: #logobecknnamLarge"
+          ></a-image>
+          <a-image
+            position="0.07224 4.59354 1.57875"
+            id="imageObjectInteract132"
+            scale="4.25 1.25 1"
+            rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
+            material="src: #logobecknnamLarge"
+          ></a-image>
+        </a-entity>
+
+        <!-- pantalas de video -->
+        <a-entity
+          id="assetsObjectsInteractVideos131"
+          rotation="0 5.613840476691806 0"
+          position="-0.0207 3.5 -0.39912"
+        >
+          <a-video
+            (click)="openVideoScreen('beckmann')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="beckmann"
+            id="assetsObjectsInteractVideo1_3_1"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoBecknamm"
+            position="2.502 0.213 -0.146"
+          ></a-video>
+
+          <a-video
+            (click)="openVideoScreen('beckmann')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="beckmann"
+            id="assetsObjectsInteractVideo1_3_2"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoBecknamm"
+            position="-2.71264 0.224 -0.06844"
+          ></a-video>
+        </a-entity>
+
+        <!-- otros elementos -->
+        <a-entity
+          id="_othersElements1_3_1"
+          rotation="0 8.172669989746062 0"
+          position="-0.24215 0.32258 -2.31806"
+        >
+          <a-entity
+            id="_othersElement1_3_1"
+            position="2.79343 0 -0.03144"
+            rotation="0 0 0"
+            static-body="sphereRadius: NaN"
+            static-body
+          >
+            <a-gltf-model
+              id="_oagaveElement1_3_1"
+              rotation="0 0 0"
+              position="0.10835 0.38156 0.07601"
+              scale="1 1 1"
+              src="#_element_agave"
+            >
+            </a-gltf-model>
+
+            <a-entity
+              id="_oElement1_3_1"
+              material="color: #c37349"
+              geometry="height: 0.3; width: 0.4; depth: 0.4"
+              position="-0.00026 0.25 0.00061"
+            ></a-entity>
+            <a-entity
+              id="_oElement1_3_2"
+              scale="1 1 1"
+              rotation="-90 0 0"
+              material="color: #4e3b31"
+              geometry="primitive: plane; radius: 1; width: 0.35; height: 0.35"
+              position="0 0.40294 0"
+            ></a-entity>
+          </a-entity>
+          <a-entity
+            id="_othersElement1_3_2"
+            position="-2.81807 0 -0.25667"
+            static-body="sphereRadius: NaN"
+            static-body
+          >
+            <a-gltf-model
+              id="_oagaveElement1_3_2"
+              rotation="0 104.46968661738352 0"
+              position="0.12562 0.38156 -0.11356"
+              scale="1 1 1"
+              src="#_element_agave"
+            ></a-gltf-model>
+
+            <a-entity
+              id="_oElement1_3_3"
+              material="color: #c37349"
+              geometry="height: 0.3; width: 0.4; depth: 0.4"
+              position="-0.00026 0.25 0.00061"
+            ></a-entity>
+            <a-entity
+              id="_oElement1_3_4"
+              scale="1 1 1"
+              rotation="-90 0 0"
+              material="color: #4e3b31"
+              geometry="primitive: plane; radius: 1; width: 0.35; height: 0.35"
+              position="-0.00664 0.40497 0.00148"
+            ></a-entity>
+          </a-entity>
+        </a-entity>
+        <a-entity
+          id="_othersElements1_3_3"
+          rotation="0 -172.8493346772716 0"
+          position="-1.87277 2.39907 -1.26586"
+        >
+          <a-gltf-model
+            static-body
+            id="_botellaElement1_3_1"
+            static-body="sphereRadius: NaN"
+            position="0.06906 0 -0.00236"
+            rotation="0 0 0"
+            scale="3 3 3"
+            src="#_element_botella_jc1"
+            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+          ></a-gltf-model>
+          <a-gltf-model
+            static-body
+            id="_botellaElement1_3_2"
+            position="-0.21261 0 -0.00597"
+            rotation="0 0 0"
+            scale="3 3 3"
+            src="#_element_botella_jc1"
+            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+          ></a-gltf-model>
+          <a-gltf-model
+            static-body
+            id="_botellaElement1_3_3"
+            position="-0.49415 0 -0.00929"
+            rotation="0 0 0"
+            scale="3 3 3"
+            src="#_element_botella_jc1"
+            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+          ></a-gltf-model>
+          <a-gltf-model
+            static-body
+            id="_botellaElement1_3_4"
+            static-body="sphereRadius: NaN"
+            position="-0.7651 0 -0.01115"
+            rotation="0 0 0"
+            scale="3 3 3"
+            src="#_element_botella_jc1"
+            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+          ></a-gltf-model>
+        </a-entity>
+      </a-entity>
+
+      <!--  -->
+      <a-entity
+        id="objectInteract_entity12"
+        position="1.15882 -2 14.86626"
+        rotation="0 -5.8957357118961715 0"
+      >
+        <a-gltf-model
+          static-body
+          id="objectInteract12"
+          rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
+          position="0 0 0"
+          scale="1.5 1.5 1.5"
+          src="#_element_kiosko"
+        ></a-gltf-model>
+
+        <a-entity
+          id="assetsObjectsInteract122"
+          scale="1 1 1"
+          position="-0.15358 1.42714 -1.82278"
+        >
+          <a-image
+            position="0 0 0"
+            id="imageObjectInteract123"
+            scale="2 2 2"
+            rotation="0 -174.86557315833699 0"
+            material="src: #logoZarzuelaSquare"
+          ></a-image>
+        </a-entity>
+
+        <a-entity
+          id="assetsObjectsInteract121"
+          rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
+          position="0 2.784 0"
+        >
+          <a-image
+            position="0.06116 -4.69823 0.98954"
+            id="imageObjectInteract121"
+            scale="4.25 1.25 1"
+            rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+          <a-image
+            position="0.07224 4.59354 1.57875"
+            id="imageObjectInteract122"
+            scale="4.25 1.25 1"
+            rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+        </a-entity>
+
+        <a-entity
+          id="assetsObjectsInteractVideos121"
+          rotation="0 5.613840476691806 0"
+          position="-0.0207 3.5 -0.39912"
+        >
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="assetsObjectsInteractVideo1_2_1"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="2.502 0.213 -0.146"
+          ></a-video>
+
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="assetsObjectsInteractVideo1_2_2"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="-2.71264 0.224 -0.06844"
+          ></a-video>
+        </a-entity>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+  <a-entity id="screenStands" screenStands position="0 0 0">
+    <a-entity class="scenario1" id="screens-room1" position="0 0 0">
+      <a-entity
+        id="sc_entity11"
+        position="9.6745 -2 -21.93707"
+        rotation="0 93.89575050824418 0"
+      >
+        <a-gltf-model
+          static-body
+          id="screen11"
+          static-body="sphereRadius: NaN"
+          static-body
+          rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233"
+          position="0 0 0"
+          scale="0.5 2 1.8"
+          src="#_element_mundoCuervo"
+          class="clickeable"
+          goclick
+          spot="linkto:uberEats;type:url"
+          renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+        ></a-gltf-model>
+        <a-gltf-model
+          static-body
+          id="screen12"
+          rotation="-0.0011459155902616466 -40.3946704723133 0"
+          position="-1.62357 0 2.57277"
+          scale="0.5 2 1.8"
+          src="#_element_mundoCuervo"
+          class="clickeable"
+          goclick
+          spot="linkto:uberEats;type:url"
+          renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+        ></a-gltf-model>
+      </a-entity>
+
+      <a-entity
+        id="sc_entity12"
+        position="-12.28728 -2 -19.57883"
+        rotation="0 153.30173358079333 0"
+      >
+        <a-gltf-model
+          static-body
+          id="screen13"
+          rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233"
+          position="0 0 0"
+          scale="0.5 2 1.8"
+          src="#_element_corona"
+          renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+        ></a-gltf-model>
+        <a-gltf-model
+          static-body
+          id="screen14"
+          rotation="-0.0011459155902616466 -40.3946704723133 0"
+          position="-1.57429 0 2.82563"
+          scale="0.5 2 1.8"
+          src="#_element_corona"
+          renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+        ></a-gltf-model>
+      </a-entity>
+
+      <a-entity
+        id="sc_entity13"
+        position="-6.14624 -2 12.23303"
+        rotation="0 -164.44289790711218 0"
+      >
+        <a-gltf-model
+          static-body
+          id="screen15"
+          rotation="0.002864788975654116 90.2769490741979 0.0005729577951308233"
+          position="0 0 0"
+          scale="1 1.75 1.5"
+          src="#_element_beckmann"
+          renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+        ></a-gltf-model>
+      </a-entity>
+
+      <a-entity
+        id="sc_entity14"
+        position="-19.29019 -2 12.91485"
+        rotation="0 142.42355688243953 0"
+      >
+        <a-gltf-model
+          static-body
+          id="screen16"
+          rotation="0.002864788975654116 95.78937602115155 0.0005729577951308233"
+          position="0 0 0"
+          scale="1 1.75 1.5"
+          src="#_element_beckmann"
+          renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
+        ></a-gltf-model>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+  <!-- target: #target; -->
+  <a-entity
+  id="rig"
+    velocity="0 -2.862580000059097 0"
+    position-listener
+    camera_reader
+    movement-controls="fly: false; speed: 0.5"
+    kinematic-body
+    position="0 0 7.999671852158966e-17">
+    <!-- mouse-cursor -->
+    <a-entity
+      camara
+      id="cam"
+      camera="fov:80"
+      position="0 3 0"
+      look-controls="pointerLockEnabled: true;"
+      animation__zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
+      animation__zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;"
+    >
+      <!-- <a-cursor fuse="false" color="#000000"></a-cursor> -->
+
+      <a-cursor
+        raycaster="objects: .clickeable"
+        id="cursor-visual"
+        cursor="fuse:false;fuseTimeout:500"
+        material="shader:flat;color:#09B4FF"
+        position="-0.14726 0.14149 -1.79561"
+        geometry="primitive: ring; radiusInner:0.015; radiusOuter:0.025;thetaLength:0"
+        animation__mouseenter="property: geometry.thetaLength; dir: alternate; dur: 500;
+                  easing: easeInSine; from:0;to: 360;startEvents:startFuse;pauseEvents:stopFuse;autoplay:false"
+        animation__mouseleave="property: geometry.thetaLength; dir: alternate; dur: 500;
+                  easing: easeInSine; to: 0;startEvents:stopFuse;autoplay:false"
+      >
+        <!-- <a-entity geometry="primitive:ring;radiusOuter:0.025;radiusInner:0.015" material="shader:flat;color:#000000"></a-entity> -->
+        <a-entity
+          geometry="primitive:ring;radiusOuter:0.025;radiusInner:0.015"
+          material="shader:flat;color:#000000"
+        ></a-entity>
+      </a-cursor>
+
+      <a-plane
+        id="camfadeplane"
+        rotation="10 0.5 0"
+        position="0 0 -0.5"
+        material="color:#000000;transparent:true;opacity:0"
+        width="2"
+        height="2"
+        animation__fadein="property:material.opacity;to:1;dur:2000;startEvents:camFadeIn"
+        animation__fadeout="property:material.opacity;to:0;dur:200;startEvents:camFadeOut"
+      >
+      </a-plane>
+    </a-entity>
+  </a-entity>
+</a-scene>
+
+<!-- dialogos de videos -->
+<!-- <p-dialog  (onHide)="this.closeVideoView('beckmann')" header="OperaStudio | Beckmann" [(visible)]="this.visibleVideoScren" [modal]="true" [style]="{width: '75vw'}" [baseZIndex]="10000">
+
+  <app-visor-video
+  *ngIf="this.visibleVideoScren == true"
+  [video]="'x7zbufr'"
+  [type]="'daily'"
+  (close)="this.closeVideoView('beckmann')"
+  >
+
+  </app-visor-video>
+
+
+</p-dialog> -->
+
+<!-- <p-dialog (onHide)="this.closeVideoView('zarzuela')" header="Zarzuela por el mundo" [(visible)]="this.visibleVideoZarzuela" [modal]="true" [style]="{width: '75vw'}" [baseZIndex]="10000">
+
+  <app-visor-video
+  *ngIf="this.visibleVideoZarzuela == true"
+  [video]="'x7zf69t'"
+  [type]="'daily'"
+  (close)="this.closeVideoView('zarzuela')"
+  >
+
+  </app-visor-video>
+
+</p-dialog> -->
+
+<!-- dialogos de pantalla transparente -->
+<!--
+<p-dialog  header="Guía del usuario" [(visible)]="this.dialogHelpText" [modal]="true" [style]="{width: '75vw'}" [baseZIndex]="10000">
+
+  <div class="containText">
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consectetur tempore vitae maiores earum soluta deserunt facilis nesciunt recusandae corporis! Praesentium odit commodi similique quod officiis suscipit numquam, distinctio blanditiis?
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt inventore ad voluptas sequi sed ipsum repellat placeat, rerum et. Officia voluptate blanditiis officiis dicta alias ut expedita consectetur reiciendis facere.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Non labore sit, cum aliquam natus in sed, inventore nesciunt tenetur mollitia debitis illo necessitatibus eveniet incidunt illum, at vero odio expedita.
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam voluptatem minima ullam iste maiores quasi, sed et, ipsam tenetur consectetur eos nesciunt natus? Doloribus unde placeat eum eaque, dolor recusandae?
+  </p>
+
+</div>
+
+</p-dialog> -->

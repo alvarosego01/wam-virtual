@@ -1,0 +1,427 @@
+
+
+
+<a-scene
+class="inicio animate__animated animate__fadeIn"
+id="project"
+project
+background="color: #212"
+webxr="referenceSpaceType: local"
+environment
+cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable"
+
+renderer="gammaOutput: true"
+
+>
+
+
+
+<a-assets timeout="50000">
+
+  <img id="room1" src="./assets/files/images//museum/1.jpg" crossorigin="anonymous"/>
+  <img id="room2" src="./assets/files/images//museum/2.jpg" crossorigin="anonymous"/>
+  <img id="room3" src="./assets/files/images//museum/3.jpg" crossorigin="anonymous"/>
+  <img id="room4" src="./assets/files/images//museum/4.jpg" crossorigin="anonymous"/>
+
+  <!-- artes -->
+  <img id="zarzuela" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Dona_Francisquita.jpg" crossorigin="anonymous"/>
+  <img id="nancy" src="https://pbs.twimg.com/profile_images/527058117503090689/zGXP05WD.jpeg" crossorigin="anonymous"/>
+  <img id="placido" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Concierto_de_Pl%C3%A1cido_Domingo_con_motivo_del_A%C3%B1o_Jubilar_Mariano_%287-06-2019%29_01.jpg" crossorigin="anonymous"/>
+
+  <!-- direccionales -->
+  <img id="hotspot" src="./assets/files/elements/interact-elements/arrowIcon.png" crossorigin="anonymous"/>
+  <img id="arrowEnter" src="./assets/files/elements/interact-elements/enterIcon.png" crossorigin="anonymous"/>
+
+   <a-mixin
+   id="arrowLocationMixin"
+   geometry="primitive: plane; width: 0.5; height: 1.2"
+   material="color: transparent; shader: flat; side: double"
+   animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+   animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+   >
+   </a-mixin>
+
+  <!--  -->
+  <a-mixin
+    id="frame"
+    geometry="primitive: plane; width: 3.6; height: 5.1"
+    material="color: white; shader: flat"
+    animation__scale="property: scale; to: 1.2 1.2 1.2; dur: 200; startEvents: mouseenter"
+    animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
+   ></a-mixin>
+   <a-mixin
+    id="poster"
+    geometry="primitive: plane; width: 3.5; height: 5"
+    material="color: white; shader: flat"
+    material="shader: flat"
+    position="0 0 0.005"
+   ></a-mixin>
+   <a-mixin
+    id="movieImage"
+    geometry="primitive: plane; width: 1.5; height: 0.81"
+    material="src: #ponyo; shader: flat; transparent: true"
+    position="0 0.495 0.002"
+   ></a-mixin>
+
+
+
+</a-assets>
+
+
+<a-sky id="skybox" src="#room1"></a-sky>
+
+<a-cylinder position="0 1 0" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+
+
+<a-entity
+  id="background"
+  position="0 0 0"
+  geometry="primitive: sphere; radius: 2.0"
+  material="color: red; side: back; shader: flat"
+  scale="0.001 0.001 0.001"
+  visible="false" class="raycastable">
+</a-entity>
+
+
+
+<a-entity
+id="signals"
+>
+<!-- room1 -->
+
+  <a-entity class="scenario1" id="signals-room1" position="0 0 0" >
+
+  <a-text
+  id="text1" text="align: center; baseline: center; anchor: center; side: double; width: 5; tabSize: 4; transparent: true; value: Bienvenidos al museo; whiteSpace: pre" rotation="0 89.43240928417508 -0.19996227050065732" position="-6.79388 6.70801 0.02214"
+   value="Bienvenidos al museo" ></a-text>
+
+</a-entity>
+
+<a-entity class="scenario2" id="signals-room2" position="0 0 0" >
+
+  <a-text
+  id="text21" text="align: center; baseline: center; anchor: center; side: double; width: 5; tabSize: 4; transparent: true; value: Bienvenidos al museo; whiteSpace: pre" rotation="0 180 -0.19996227050065732" position="-1.54279 5.42578 5.38911"
+   value="Al Lobby" ></a-text>
+
+   <a-text
+  id="text22" text="align: center; baseline: center; anchor: center; side: double; width: 5; tabSize: 4; transparent: true; value: Bienvenidos al museo; whiteSpace: pre" rotation="0 89.43240928417508 -0.19996227050065732" position="-6.34632 5.42838 -2.70595"
+   value="Sala 2" ></a-text>
+
+</a-entity>
+
+<a-entity class="scenario3" id="signals-room3" position="0 0 0" >
+
+  <a-text
+  id="text31" text="align: center; baseline: center; anchor: center; side: double; width: 5; tabSize: 4; transparent: true; value: Bienvenidos al museo; whiteSpace: pre" rotation="0 180 -0.19996227050065732" position="-1.54279 5.42578 5.38911"
+   value="Sala 2" ></a-text>
+
+   <a-text
+  id="text32" text="align: center; baseline: center; anchor: center; side: double; width: 5; tabSize: 4; transparent: true; value: Bienvenidos al museo; whiteSpace: pre" rotation="0 89.43240928417508 -0.19996227050065732" position="-6.34632 5.42838 -2.70595"
+   value="Sala 3" ></a-text>
+
+</a-entity>
+
+<a-entity class="scenario4" id="signals-room4" position="0 0 0" >
+
+  <a-text
+  id="text41" text="align: center; baseline: center; anchor: center; side: double; width: 5; tabSize: 4; transparent: true; value: Bienvenidos al museo; whiteSpace: pre" rotation="0 -18.04645167323554 -0.19996227050065732" position="1.33409 7.27717 -4.4266"
+   value="Regresar a la sala 3" ></a-text>
+
+
+</a-entity>
+
+
+
+</a-entity>
+
+<a-entity id="doors" doors position="0 2 0">
+
+  <a-entity
+
+  class="scenario1"
+  id="doors-room1" >
+
+
+
+  </a-entity>
+
+
+  <a-entity
+  class="scenario2"
+  id="doors-room2" >
+
+
+  <a-entity door-hover modify-materials spot="linkto:#room3; room: 3" id="door21" rotation="0 -0.9872062810104083 0" position="-7.58262 -0.12963 -1.32585" scale="0.002 0.00275 0.002" gltf-model="./assets/files/3dmodel/doorf/scene.gltf" ></a-entity>
+
+  <a-entity door-hover modify-materials spot="linkto:#room1; room: 1" id="door22" rotation="0.26986312150661773 -95.04338497189121 0.12662367272391195" position="0.57624 -0.72723 7.17075" scale="0.002 0.0032 0.0025" gltf-model="./assets/files/3dmodel/doorf/scene.gltf" ></a-entity>
+
+
+  </a-entity>
+
+
+  <a-entity
+  class="scenario3"
+  id="doors-room3" >
+
+
+  <a-entity door-hover modify-materials spot="linkto:#room4; room: 4" id="door31" rotation="0 -0.9872062810104083 0" position="-7.58262 -0.12963 -1.32585" scale="0.002 0.00275 0.002" gltf-model="./assets/files/3dmodel/doorf/scene.gltf" ></a-entity>
+
+  <a-entity door-hover modify-materials spot="linkto:#room2; room: 2" id="door32" rotation="0.26986312150661773 -95.04338497189121 0.12662367272391195" position="0.57624 -0.72723 7.17075" scale="0.002 0.0032 0.0025" gltf-model="./assets/files/3dmodel/doorf/scene.gltf" ></a-entity>
+
+
+  </a-entity>
+
+
+  <a-entity
+  class="scenario4"
+  id="doors-room4" >
+
+    <a-entity
+    door-hover modify-materials spot="linkto:#room3; room: 3" id="door41"   rotation="0 -115.60053770339002 0" position="1.42851 0 -5.51851" scale="0.002 0.0032 0.0025"
+    gltf-model="./assets/files/3dmodel/doorf/scene.gltf" ></a-entity>
+
+
+
+
+  </a-entity>
+
+
+
+</a-entity>
+
+
+<a-entity id="spots" hotspots position="0 2 0">
+
+
+  <a-entity class="scenario1" id="group-room1" rotation="0 102.13087289765951 0" >
+
+
+    <a-image
+    class=" raycastable"
+    position="2.69747 0 -4.80602" material="src: #hotspot" id="arrowLocation11" rotation="89.99963750135457 179.9087476710785 0" spot="linkto:#room2;room: 2"  mixin="arrowLocationMixin" ></a-image>
+
+    <a-image
+    class=" raycastable"
+    position="0.41351 0 -2.65609" material="src: #hotspot" id="arrowLocation12" rotation="89.99963750135457 165.70798871876104 0" spot="linkto:#room2;room: 2"  mixin="arrowLocationMixin" ></a-image>
+  </a-entity>
+
+  <a-entity class="scenario2" id="group-room2" >
+
+    <a-image
+    position="-4.13374 0 -0.83648" material="src: #hotspot" id="arrowLocation21"  rotation="89.99963750135457 -102.40302785034663 0"
+    mixin="arrowLocationMixin" class=" raycastable"
+    spot="linkto:#room3; room: 3" ></a-image>
+
+    <a-image
+    position="0.26983 0 2.89901" material="src: #hotspot" id="arrowLocation22"  rotation="89.99963750135457 4.206083174055373 0"
+     mixin="arrowLocationMixin" class=" raycastable"
+    spot="linkto:#room1; room: 1" ></a-image>
+
+  </a-entity>
+
+
+  <a-entity class="scenario3" id="group-room3" >
+
+
+    <a-image
+    position="-4.13374 0 -0.83648" material="src: #hotspot" id="arrowLocation21"  rotation="89.99963750135457 -102.40302785034663 0"
+    mixin="arrowLocationMixin" class=" raycastable"
+    spot="linkto:#room4; room: 4" ></a-image>
+
+    <a-image
+    position="0.26983 0 2.89901" material="src: #hotspot" id="arrowLocation22"  rotation="89.99963750135457 4.206083174055373 0"
+     mixin="arrowLocationMixin" class=" raycastable"
+    spot="linkto:#room2; room: 2" ></a-image>
+
+
+  </a-entity>
+
+
+  <a-entity class="scenario4" id="group-room4"  >
+
+
+    <a-image
+    class=" raycastable"
+    position="0.60322 0 -2.6309" material="src: #hotspot" id="arrowLocation41" rotation="89.99963750135457 165.70798871876104 0" spot="linkto:#room3; room: 3"  mixin="arrowLocationMixin" ></a-image>
+
+
+
+  </a-entity>
+
+
+
+
+</a-entity>
+
+
+
+<a-entity id="gallery" gallery highlight>
+
+  <a-entity
+
+  id="infogroup-room1"
+  class="scenario1"
+  rotation="0 7.3859989370314425 0" position="0 5 0">
+
+
+
+  </a-entity>
+
+  <a-entity
+
+  class="scenario2"
+  id="infogroup-room2" position="-1.82502 3.75856 -0.00245"  >
+
+    <a-entity
+
+
+
+    id="art21" rotation="0 40 0" position="-8.08748 1 -9.45407" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #nancy;" position="0 0 0.05" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art22" rotation="0 -40 0" position="8.16857 1 -8.02621" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #placido" position="0 0 0.05" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art23" position="-5.59102 1 6.62423" mixin="frame" class="raycastable menu-button"  rotation="0 135 0">
+      <a-entity  material="src: #zarzuela" position="0 0 0.05" mixin="poster" ></a-entity>
+    </a-entity>
+
+
+
+  </a-entity>
+
+  <a-entity
+
+  class="scenario3"
+  id="infogroup-room3" position="-1.82502 3.75856 -0.00245" >
+
+
+    <a-entity
+
+
+
+    id="art31" rotation="0 40 0" position="-8.08748 1 -9.45407" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #nancy;" position="0 0 0.05" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art32" rotation="0 -40 0" position="8.16857 1 -8.02621" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #placido" position="0 0 0.05" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art33" position="-5.59102 1 6.62423" mixin="frame" class="raycastable menu-button"  rotation="0 135 0">
+      <a-entity  material="src: #zarzuela" position="0 0 0.05" mixin="poster" ></a-entity>
+    </a-entity>
+
+
+
+  </a-entity>
+
+  <a-entity
+
+  class="scenario4"
+  id="infogroup-room4"  rotation="0 7.3859989370314425 0" position="0 5 0" >
+
+
+    <a-entity
+
+
+
+    id="art41" rotation="0 30.33811525217709 0" position="-2.64824 2 -6.881" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #nancy;" position="0 0 0.05" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art42" rotation="0 -70 0" position="6.46032 2 -1.27323" mixin="frame" class="raycastable menu-button">
+      <a-entity material="src: #placido" position="0 0 0.05" mixin="poster"></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art43" position="-7.88406 2 1.22967" mixin="frame" class="raycastable menu-button"  rotation="0 120 0">
+      <a-entity  material="src: #zarzuela" position="0 0 0.05" mixin="poster" ></a-entity>
+    </a-entity>
+
+    <a-entity
+
+
+
+    id="art44"  mixin="frame" class="raycastable menu-button"  position="-0.32192 2 7.10357"
+    rotation="0 -164.77005680813187 0">
+      <a-entity  material="src: #zarzuela" position="0 0 0.05" mixin="poster" ></a-entity>
+    </a-entity>
+
+
+
+  </a-entity>
+
+</a-entity>
+
+
+
+<a-entity
+rotation="-4.010704565915763 72.07809062745757 0"
+camara id="cam" camera="fov:80" position="0 5 0" look-controls mouse-cursor
+          animation__zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
+          animation__zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;">
+
+  <a-entity id="cursor-visual" cursor="fuse:true;fuseTimeout:2000"
+            material="shader:flat;color:#09B4FF"
+            position="-0.14726 0.14149 -1.79561"
+            geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.015;thetaLength:0"
+            animation__mouseenter="property: geometry.thetaLength; dir: alternate; dur: 2000;
+                          easing: easeInSine; from:0;to: 360;startEvents:startFuse;pauseEvents:stopFuse;autoplay:false"
+
+            animation__mouseleave="property: geometry.thetaLength; dir: alternate; dur: 500;
+                          easing: easeInSine; to: 0;startEvents:stopFuse;autoplay:false">
+
+
+    <a-entity geometry="primitive:ring;radiusOuter:0.015;radiusInner:0.01" material="shader:flat;color:#000000"></a-entity>
+  </a-entity>
+
+  <a-plane id="camfadeplane" rotation="10 0.5 0" position="0 0 -0.5" material="color:#000000;transparent:true;opacity:0" width="2" height="2"
+  animation__fadein="property:material.opacity;to:1;dur:2000;startEvents:camFadeIn"
+  animation__fadeout="property:material.opacity;to:0;dur:200;startEvents:camFadeOut"></a-plane>
+
+
+</a-entity>
+
+
+
+
+</a-scene>
+
+<!--
+
+<p-dialog  header="Información" [(visible)]="this.openInfoArt" [modal]="true" [style]="{width: '75vw'}" [baseZIndex]="10000">
+
+  <app-info-art *ngIf="this.openInfoArt == true" [info]="this.infoShow" (close)="this.closeModal($event)"></app-info-art>
+
+</p-dialog>
+
+ -->
+
+
+

@@ -1,0 +1,24 @@
+<a-scene
+class="inicio animate__animated animate__fadeIn"
+[ngClass]="{'hide': ( this.show == false )? true: false}"
+
+>
+
+
+  <a-sky
+  [ngClass]="{'hide': ( this.show == false )? true: false}"
+  src="./assets/files/images//recorrido/sector4/4.jpg" rotation="0 90 0"></a-sky>
+  <!-- <a-sky
+  [ngClass]="{'hide': ( this.show == false )? true: false}"
+  src="https://mc.zarzuelaporelmundo.org/assets/files/images//recorrido/sector4/4.jpg" rotation="0 -130 0"></a-sky> -->
+
+
+</a-scene>
+
+
+<app-directional
+[dir]="this.directions"
+>
+
+</app-directional>
+

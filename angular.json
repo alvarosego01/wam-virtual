@@ -1,104 +1,136 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
-  "newProjectRoot": "projects",
-  "projects": {
-    "wam-virtual": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "sass"
-        }
-      },
-      "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/wam-virtual",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
-            "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "sass",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.sass"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "wam-virtual": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "sass"
                 }
-              ],
-              "outputHashing": "all"
             },
-            "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
-              "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+            "root": "",
+            "sourceRoot": "src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "allowedCommonJsDependencies": [
+                            "howler"
+                        ],
+                        "stylePreprocessorOptions": {
+                            "includePaths": [
+                                "src/"
+                            ]
+                        },
+                        "outputPath": "dist/wam-virtual",
+                        "index": "src/index.html",
+                        "main": "src/main.ts",
+                        "polyfills": [
+                            "zone.js"
+                        ],
+                        "tsConfig": "tsconfig.app.json",
+                        "inlineStyleLanguage": "sass",
+                        "assets": [
+                            "src/favicon.ico",
+                            "src/assets"
+                        ],
+                        "styles": [
+                            "src/styles.sass",
+                            "src/generals.sass"
+                        ],
+                        "scripts": [
+                            // aframe@1.1.0 aframe-physics-system aframe-extras@6.1.0 aframe-mouse-cursor-component aframe-camera-events
+                            "node_modules/aframe/dist/aframe-master.js",
+                            // "node_modules/aframe-animation-component/dist/aframe-animation-component.min.js",
+                            "node_modules/aframe-htmlembed-component/dist/build.js",
+                            //"node_modules/@engaging-computing/aframe-physics-system/dist/aframe-physics-system.min.js",
+                            "node_modules/@engaging-computing/aframe-physics-system/dist/aframe-physics-system.min.js",
+                            "node_modules/aframe-extras/dist/aframe-extras.min.js",
+                            "node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.min.js",
+                            "node_modules/aframe-camera-events/index.js",
+                            "src/assets/js/dailymotion.js"
+                        ]
+                    },
+                    "configurations": {
+                        "production": {
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "500kb",
+                                    "maximumError": "1mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        },
+                        "development": {
+                            "buildOptimizer": false,
+                            "optimization": false,
+                            "vendorChunk": true,
+                            "extractLicenses": false,
+                            "sourceMap": true,
+                            "namedChunks": true
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "wam-virtual:build:production"
+                        },
+                        "development": {
+                            "browserTarget": "wam-virtual:build:development"
+                        }
+                    },
+                    "defaultConfiguration": "development"
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "wam-virtual:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "polyfills": [
+                            "zone.js",
+                            "zone.js/testing"
+                        ],
+                        "tsConfig": "tsconfig.spec.json",
+                        "inlineStyleLanguage": "sass",
+                        "assets": [
+                            "src/favicon.ico",
+                            "src/assets"
+                        ],
+                        "styles": [
+                            "src/styles.sass",
+                            "src/generals.sass"
+                        ],
+                        "scripts": [
+                            // aframe@1.1.0 aframe-physics-system aframe-extras@6.1.0 aframe-mouse-cursor-component aframe-camera-events
+                            "node_modules/aframe/dist/aframe-master.js",
+                            // "node_modules/aframe-animation-component/dist/aframe-animation-component.min.js",
+                            "node_modules/aframe-htmlembed-component/dist/build.js",
+                            //"node_modules/@engaging-computing/aframe-physics-system/dist/aframe-physics-system.min.js",
+                            "node_modules/@engaging-computing/aframe-physics-system/dist/aframe-physics-system.min.js",
+                            "node_modules/aframe-extras/dist/aframe-extras.min.js",
+                            "node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.min.js",
+                            "node_modules/aframe-camera-events/index.js",
+                            "src/assets/js/dailymotion.js"
+                        ]
+                    }
+                }
             }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
-            "production": {
-              "browserTarget": "wam-virtual:build:production"
-            },
-            "development": {
-              "browserTarget": "wam-virtual:build:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "wam-virtual:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "sass",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.sass"
-            ],
-            "scripts": []
-          }
         }
-      }
     }
-  }
 }

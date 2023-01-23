@@ -1,0 +1,213 @@
+
+
+
+
+<a-scene
+
+cursor="rayOrigin: mouse; fuse: false"
+color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights: true"
+physics="debug: true">
+
+
+
+  <a-assets>
+
+    <!-- <img id="circleFather" src="./assets/files/elements/digital-menu/facircle2.png" crossorigin="anonymous"/>
+    <img id="logocenterFather" src="./assets/files/elements/digital-menu/centercircle.png" crossorigin="anonymous"/>
+
+    <img id="itemCircle" src="./assets/files/elements/digital-menu/chcircle.png" crossorigin="anonymous"/>
+    <img id="connect" src="./assets/files/elements/digital-menu/conect.png" crossorigin="anonymous"/>
+
+    <img id="linea" src="./assets/files/elements/digital-menu/Linea2.png" crossorigin="anonymous"/>
+ -->
+
+
+
+    <a-asset-item id="_menu_interface3D" src="./assets/files/3dmodel/menu_interface/Menu3d.gltf"></a-asset-item>
+
+
+  </a-assets>
+
+<!--
+  <a-entity  id="floatMenuElementTransparentScreen" material="color: #000" geometry="primitive: plane; height: 3.5; width: 4.5" position="0 1.77071 0" scale="1 1 1" rotation="0 0 0">
+
+
+    <a-entity id="fatherCenter" position="0 0 0.04184" scale="1 1 1" >
+
+      <a-image position="0 0 0" id="_fatherCircle" scale="1 1 1" rotation="0 0 0" material="src: #circleFather"  >
+      </a-image>
+        <a-image position="0 0 0.0023" id="_logocenterfather" scale="0.85 0.85 0.85" rotation="0 0 0" material="src: #logocenterFather"  ></a-image>
+
+
+
+        <a-entity id="_linesCore" position="0 0 0.00512">
+
+
+
+          <a-image position="-0.00052 0.68745 0" id="_lineCore1" geometry="height: 0.175; width: 0.6" scale="1 1 1" rotation="0 0 90" material="src: #linea"  >
+          </a-image>
+          <a-image position="0.69995 0.54124 0" id="_lineCore2" geometry="height: 0.175; width: 1" scale="1 1 1" rotation="0 0 38.7754917432736" material="src: #linea"  >
+          </a-image>
+          <a-image position="-0.81972 0.35314 0" id="_lineCore3" geometry="height: 0.175; width: 1.05" scale="1 1 1" rotation="0 0 155.15582500583668" material="src: #linea"  >
+          </a-image>
+
+          <a-image position="-0.59745 -0.57123 0" id="_lineCore4" geometry="height: 0.175; width: 0.85" scale="1 1 1" rotation="0 0 42.43955684313521" material="src: #linea"  >
+          </a-image>
+          <a-image position="0.62116 -0.56165 0.00219" id="_lineCore5" geometry="height: 0.175; width: 0.95" scale="1 1 1" rotation="0 0 138.22148441295005" material="src: #linea"  >
+          </a-image>
+          <a-image position="0.66599 0.08869 0.00077" id="_lineCore6" geometry="height: 0.175; width: 0.55" scale="1 1 1" rotation="0 0 4.573922078529362" material="src: #linea"  >
+          </a-image>
+
+
+
+        </a-entity>
+
+
+    </a-entity>
+
+    <a-entity position="0.00831 1.19343 0.05" id="_item_menu1">
+
+      <a-image position="0 0 0" id="_item_circle1" scale="0.65 0.65 0.65" rotation="0 0 0" material="src: #itemCircle" htmlembed >
+
+
+
+      </a-image>
+
+    </a-entity>
+
+    <a-entity position="1.30488 1.04607 0.05" id="_item_menu2">
+
+      <a-image position="0 0 0" id="_item_circle2" scale="0.85 0.85 0.85" rotation="0 0 0" material="src: #itemCircle"  >
+      </a-image>
+
+    </a-entity>
+
+    <a-entity position="1.20282 0.16858 0.05" id="_item_menu3">
+
+      <a-image position="0 0 0" id="_item_circle3" scale="0.65 0.65 0.65" rotation="0 0 0" material="src: #itemCircle"  >
+      </a-image>
+
+    </a-entity>
+
+    <a-entity position="1.21356 -1.03002 0.05" id="_item_menu4">
+
+      <a-image position="0 0 0" id="_item_circle4" scale="0.85 0.85 0.85" rotation="0 0 0" material="src: #itemCircle"  >
+      </a-image>
+
+    </a-entity>
+
+    <a-entity position="-1.47183 0.66074 0.05" id="_item_menu5">
+
+      <a-image position="0 0 0" id="_item_circle5" scale="0.65 0.65 0.65" rotation="0 0 0" material="src: #itemCircle"  >
+      </a-image>
+
+    </a-entity>
+
+    <a-entity position="-1.1625 -0.99542 0.05" id="_item_menu6">
+
+      <a-image position="0 0 0" id="_item_circle6" scale="0.85 0.85 0.85" rotation="0 0 0" material="src: #itemCircle"  >
+      </a-image>
+
+    </a-entity>
+
+
+
+  </a-entity> -->
+
+
+<!--
+  <a-entity id="menuFloat3D">
+
+    <a-entity id="_menuFloat3D_lector_click">
+
+
+
+    </a-entity>
+
+  </a-entity> -->
+
+
+  <a-entity
+  #menu3D
+  boxtest
+  id="elementoPrueba"
+  geometry="primitive: box"
+  material="color: red; opacity: 1"
+  position="1 0 1"
+  scale="1 1 1"
+  animation__fade_out="property: material.opacity;from: 1; to: 0; dur: 500; startEvents: outmenu"
+  animation__up_out="property: position; to: -2.53228 1 0; dur: 500; startEvents: outmenu"
+  animation__visible_out="property: visible;from: true; to: false; dur: 1000; startEvents: outmenu"
+  animation__visible_in="property: visible;from: false; to: true; dur: 10; startEvents: inmenu"
+  animation__fade_in="property: material.opacity ;from: 0; to: 1; dur: 500; startEvents: inmenu"
+  animation__up_in="property: position; to: -2.53228 0.34497 0; dur: 500; startEvents: inmenu"
+
+  >
+  <!-- animation__up_In="property: position; to: -2.53228 0.34497 0; dur: 2000; startEvents: inmenu2" -->
+  <!-- animation__up_Out="property: position; to: -2.53228 1 0; dur: 2000; startEvents: outmenu2" -->
+
+  <!-- animation__fade_out="property: material.opacity; from: 1; to: 0; dur: 3000; startEvents: salida"
+  animation__fade_in="property: material.opacity; from: 0; to: 1; dur: 3000; startEvents: entrada" -->
+  <a-animation>
+
+  </a-animation>
+</a-entity>
+  <!-- animation__up="property: position; to: 1 1 1; dur: 3000" -->
+  <!-- animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500" -->
+
+
+
+
+
+  <!-- Floor -->
+  <a-plane static-body material="color: grey" width="15" height="15" rotation="-90 0 0" position="0 0 0"></a-plane>
+  <a-box
+  (click)="this.clicktest()"
+   goclick width="10" height="5" depth="0.5" static-body material="color: red" position="0 2 -5"></a-box>
+
+
+
+
+
+   <!-- target: #target; -->
+<a-entity id="rig" velocity="0 -1.0718749999286956 0"  position-listener camera_reader  movement-controls="fly: false; speed: 0.5" kinematic-body   position="0 0 0" >
+
+  <!-- mouse-cursor -->
+  <a-entity camara id="cam" camera="fov:80" position="0 2 0"  look-controls="pointerLockEnabled: true;"
+  animation__zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
+  animation__zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;">
+
+
+    <!-- <a-cursor fuse="false" color="#000000"></a-cursor> -->
+
+    <a-cursor
+    raycaster="objects: .clickeable"
+    id="cursor-visual" cursor="fuse:false;fuseTimeout:500"
+    material="shader:flat;color:#09B4FF"
+    position="-0.14726 0.14149 -1.79561"
+    geometry="primitive: ring; radiusInner:0.015; radiusOuter:0.025;thetaLength:0"
+    animation__mouseenter="property: geometry.thetaLength; dir: alternate; dur: 500;
+                  easing: easeInSine; from:0;to: 360;startEvents:startFuse;pauseEvents:stopFuse;autoplay:false"
+
+    animation__mouseleave="property: geometry.thetaLength; dir: alternate; dur: 500;
+                  easing: easeInSine; to: 0;startEvents:stopFuse;autoplay:false">
+
+
+<!-- <a-entity geometry="primitive:ring;radiusOuter:0.025;radiusInner:0.015" material="shader:flat;color:#000000"></a-entity> -->
+<a-entity  geometry="primitive:ring;radiusOuter:0.025;radiusInner:0.015" material="shader:flat;color:#000000"></a-entity>
+
+</a-cursor>
+
+
+<a-plane id="camfadeplane" rotation="10 0.5 0" position="0 0 -0.5" material="color:#000000;transparent:true;opacity:0" width="2" height="2"
+animation__fadein="property:material.opacity;to:1;dur:2000;startEvents:camFadeIn"
+animation__fadeout="property:material.opacity;to:0;dur:200;startEvents:camFadeOut">
+</a-plane>
+
+
+  </a-entity>
+</a-entity>
+
+
+
+</a-scene>

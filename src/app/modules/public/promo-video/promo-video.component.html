@@ -1,0 +1,35 @@
+<div
+class="cuerpo">
+
+
+<div id="videopromo" class="videopromo">
+
+</div>
+
+
+<!-- <iframe
+id="videoPromo"
+type="text/html" src="https://www.youtube.com/embed/ZZHF3WOxmBg?autoplay=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0" frameborder="0" ></iframe> -->
+
+
+<div
+ *ngIf="this.skipButton == true"
+  class="controls">
+
+     <div class="return">
+
+         <a
+         (click)="this.goSector('/public/travel')"
+         class="buttonSignals" >
+         <i class="fas fa-play    "></i>
+             <span>
+                 Saltar anuncio
+             </span>
+         </a>
+
+     </div>
+
+ </div>
+
+
+</div>

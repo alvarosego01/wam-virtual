@@ -1,0 +1,62 @@
+
+
+ <main >
+
+  <div class="cuerpo">
+
+
+        <div
+          id="myVideoContainer"
+          [ngClass]="{'greyBackground': (this.showMenu == true)? true: false,
+            'hide': (this.reproducVideo == false)? true: false
+        }" >
+
+
+            <div
+
+            id="myVideo" class="myVideo">
+
+
+          </div>
+
+        </div>
+
+
+
+            <section id="principalStart">
+
+
+              <div class="toggleMenu">
+
+              </div>
+
+
+              <app-principal-menu
+              *ngIf="this.showMenu == true"
+              >
+
+              </app-principal-menu>
+
+
+              <!-- <div *ngIf="this.skipeable == true" class="skipeControl">
+
+                <button (click)="skipeIntro()" class="buttonControl buttonPrincipal">
+                  <i class="fas fa-play    "></i>
+                  <span>
+                    Adelantar
+                  </span>
+                </button>
+
+              </div> -->
+
+
+            </section>
+
+
+
+
+
+
+      </div>
+</main>
+

@@ -1,0 +1,35 @@
+
+
+
+<div class="visorVideo">
+
+
+    <video
+    *ngIf="this.video != null && this.type != 'daily'"
+    class="animate__animated"
+    autoplay
+    (ended)="this.videoEnd()"
+    class="video"
+
+    >
+
+        <source  controls  [src]="this.video" type="video/mp4">
+    </video>
+
+
+
+
+    <div
+    style="height: 550px;"
+        *ngIf="this.video != null && this.type == 'daily'"
+        id="myVideo" class="myVideo">
+
+
+      </div>
+
+
+
+
+
+
+</div>

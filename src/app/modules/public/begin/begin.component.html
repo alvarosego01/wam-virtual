@@ -1,0 +1,137 @@
+
+
+
+<!-- <video class="animate__animated videoFondo" [ngClass]="{'beginOutVideo': (this.landingPlanet == true)? true: false}" loop
+  muted autoplay id="myVideo">
+  <source src="./assets/files/elements/video/Video Zarzuela.mp4" type="video/mp4">
+</video>
+ -->
+
+
+<section (animationstart)="animacionStart($event)" (animationend)="animacionEnd($event)"
+  [ngClass]="{'beginOut': (this.landingPlanet == true)? true: false}" class="section animate__animated">
+
+
+  <div class="elements">
+
+    <ul class="iconos">
+
+      <li>
+
+      </li>
+
+      <li>
+        <!-- <a href="">
+          <img src="./assets/files/elements/iconsLogos/Cuervo.png" alt="">
+
+        </a> -->
+      </li>
+
+    </ul>
+
+  </div>
+  <div class="central">
+
+    <div class="advertencia animate__animated " [ngClass]="{'animate__fadeOut': (this.counter.sec >= 5)? true: false }">
+      <img src="./assets/files/elements/iconsLogos/Audi.png" alt="">
+      <h6 class="advertencia">
+        Para una mejor experiencia, recomendamos <br>
+        usar audífonos y apagar las luces
+      </h6>
+    </div>
+
+    <div *ngIf="this.counter.sec >= 5" class="logo">
+      <img class="animacionLogoEntrada imgLogo" src="./assets/files/elements/iconsLogos/isotipoPlatinum.png"
+        alt="">
+
+
+      <div class="textLogo">
+
+        <app-animate-text
+        [titulo]="'Zarzuela por el Mundo'" [subTitulo]="''"
+        [reveal]="this.letrasLogo"
+        [typeTitle]="'textoLogoZarzuela'">
+
+      </app-animate-text>
+
+
+      <img
+      [ngClass]="{'enterVr': (this.logoVr == true)? true: false}"
+      src="./assets/files/elements/gifs/vr.gif" alt="" class="gifVR">
+
+
+    </div>
+
+
+    </div>
+
+  </div>
+
+  <!-- [routerLink]="['/public/promo']" routerLinkActive="active" -->
+  <div *ngIf="this.showButton == true" class="accion animate__fadeIn">
+
+
+    <!-- [routerLink]="['/public/principal']" routerLinkActive="active" -->
+    <!-- (accion)="this.goViaje()" -->
+
+    <app-principal-button
+    [texto]="'Iniciar'"
+    (click)="this.goViaje()"
+
+    >
+    </app-principal-button>
+
+
+
+
+  </div>
+
+  <app-saludos *ngIf="this.saludos"
+  [saludos]="this.saludos"
+  [endSaludos]="this.endSaludos"
+  (finSaludos)="this.finSaludos($event)"
+  >
+  </app-saludos>
+
+
+
+
+  <!-- <div class="skipeControl">
+
+    <button (click)="skipeIntro()" class="buttonControl buttonPrincipal">
+      <i class="fas fa-play    "></i>
+      <span>
+        Saltar intro
+      </span>
+    </button>
+
+  </div> -->
+
+
+
+</section>
+
+
+
+<app-light-speed
+  *ngIf="this.lightSpeed == true"
+  class="animate__animated entradaEstrellas"
+  [lightSpeed]="this.EntradalightSpeed"
+  (endLightSpeed)="goLandingPlanet($event)"
+  [ngClass]="{'salidaEstrellas': ( this.landingPlanet == true )? true: false}"
+  >
+
+  </app-light-speed>
+
+
+
+  <!-- class="animate__animated entradaEstrellas" -->
+<app-landing-planet
+*ngIf="this.landingPlanet == true"
+class="animate__animated entradaEstrellas"
+  (endLanding)="endLanding($event)">
+
+</app-landing-planet>
+
+
+

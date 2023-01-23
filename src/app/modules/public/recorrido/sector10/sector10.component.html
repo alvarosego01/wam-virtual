@@ -1,0 +1,19 @@
+<a-scene
+class="inicio animate__animated animate__fadeIn"
+[ngClass]="{'hide': ( this.show == false )? true: false}"
+
+>
+  <a-sky
+  [ngClass]="{'hide': ( this.show == false )? true: false}"
+  src="./assets/files/images//recorrido/sector10/10.jpg" rotation="0 -130 0"></a-sky>
+
+
+</a-scene>
+
+
+<app-directional
+[dir]="this.directions"
+>
+
+</app-directional>
+

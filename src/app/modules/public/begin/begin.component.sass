@@ -1,0 +1,508 @@
+
+
+@import "generals"
+
+*
+    box-sizing: border-box
+
+
+.videoFondo
+    transform: rotate(180deg)
+
+.cuadrito
+    background-color: red
+    height: 500px
+    width: 500px
+
+#myVideo
+    object-fit: cover
+    width: 100vw
+    height: 100vh
+    position: fixed
+    top: 0
+    left: 0
+
+.section
+    // background-color: red
+    background-color: transparent!important
+    height: 100%
+    width: 100%
+    display: flex
+    position: relative
+    flex-direction: column
+    justify-content: space-between
+    // position: absolute
+    padding-top: 2.5%
+    padding-bottom: 2.5%
+
+    .elements
+        // height: 100%
+        display: flex
+        flex-direction: row
+        justify-content: center
+        position: relative
+        z-index: 1
+        animation: fadeInDown
+        animation-duration: 1.25s
+        // --animate-delay: 5s
+
+        ul.iconos
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            text-decoration: none
+            list-style: none
+            padding: 0
+            width: 90%
+            height: max-content
+            margin: 0 auto
+            li
+                height: fit-content
+                display: block
+                a
+                    img
+                        height: 4vw
+                        display: block
+                // &:nth-of-type(2)
+                //     a
+                //         text-decoration: none
+                //         color: $grisColor
+                //         display: flex
+                //         flex-direction: column
+                //         justify-content: center
+                //         align-content: center
+                //         img
+                //             margin: 0 auto
+                //             position: relative
+                //             display: block
+                //             animation-name: upDown
+                //             animation-duration: 1.5s
+                //             animation-iteration-count: infinite
+
+
+        @include responsivo(telefonoTable)
+            ul.iconos
+                li
+                    a
+                        img
+                            height: 35px
+        @include responsivo(pcMedio)
+            ul.iconos
+                li
+                    a
+                        img
+                            height: 45px
+
+
+    .central
+        z-index: 1
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        margin: auto
+        display: flex
+        justify-content: center
+        justify-items: center
+        align-content: center
+        align-items: center
+        width: 100%
+        .advertencia
+            display: flex
+            margin: auto
+            flex-direction: column
+            justify-content: center
+            align-content: center
+            animation-duration: 2s
+
+            img
+                margin: 0 auto
+                display: block
+                position: relative
+                display: block
+                animation-name: upDown
+                animation-duration: 1.5s
+                animation-iteration-count: infinite
+                margin-bottom: 25px
+                height: 175px
+            h6
+                color: white
+                font-weight: thin
+                font-size: 38px
+                text-align: center
+                position: relative
+                padding-top: 25px
+                margin-top: 25px
+                &::before
+                    content: ''
+                    border-bottom: 3px solid white
+                    width: 75px
+                    display: block
+                    left: 0
+                    right: 0
+                    top: 0
+                    margin: 0 auto
+                    position: absolute
+
+                // bottom: 0
+
+
+        .logo
+            width: 100%
+            position: absolute
+            margin-bottom: 5%
+            img
+                display: block
+                height: 275px
+                margin: 0 auto
+                margin-bottom: 15px
+                @include responsivo(telefonoTable)
+                    height: 175px
+                @include responsivo(pcMedio)
+                    height: 175px
+    .accion
+        // height: 75px
+        z-index: 1
+        position: relative
+        bottom: 10%
+        .buttonPrincipal
+            display: flex
+            justify-content: center
+            button
+                border: 1px solid $grisColor
+                padding: 7.5px 25px
+                margin: 0 auto
+                background-color: transparent!important
+                border-radius: 0
+                color: $grisColor
+                font-size: 16px
+                position: relative
+                transition: $trans
+                animation: fadeIn
+                animation-duration: 2.5s
+                &::before
+                    content: ''
+                    height: 30px
+                    position: absolute
+                    top: -45px
+                    left: 0
+                    right: 0
+                    margin: 0 auto
+                    display: block
+                    border-right: 1px solid $grisColor
+                    width: 1px
+                    transition: $trans
+                    animation: fadeInDown
+                    animation-duration: 1.25s
+                &:hover
+                    color: black
+                    background-color: white!important
+                    border: 1px solid white
+                    // border: 1px solid $primaryApp
+                    // border: 1px solid red
+                    &::before
+                        top: 0
+                        border-right: 1px solid transparent
+                @include responsivo(telefonoTable)
+                    font-size: 12.5px
+                @include responsivo(pcMedio)
+                    font-size: 14px
+
+
+app-saludos
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    width: 100%
+    height: 100%
+    margin: 0 auto
+    padding-top: 2.5%
+    padding-bottom: 2.5%
+    display: flex
+    justify-content: center
+
+
+app-light-speed,
+app-landing-planet
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    display: block
+    margin: auto
+
+
+
+.salidaAviaje
+    -webkit-animation: scale-out-center 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both
+    animation: scale-out-center 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both
+
+.entradaEstrellas
+    animation: fadeIn
+    animation-duration: 3.5s
+
+
+.salidaEstrellas
+    animation: fadeOut
+    animation-duration: 2.5s
+
+.entradaPlaneta
+    -webkit-animation: scale-in-center 2.5s cubic-bezier(1, 0, 0, 1) alternate both
+    animation: scale-in-center 2.5s cubic-bezier(1, 0, 0, 1) alternate both
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-12-30 3:37:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ----------------------------------------------
+
+/**
+ * ----------------------------------------
+ * animation scale-in-center
+ * ----------------------------------------
+@-webkit-keyframes scale-in-center
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        opacity: 1
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        opacity: 1
+
+@keyframes scale-in-center
+    0%
+        -webkit-transform: scale(0)
+        transform: scale(0)
+        opacity: 1
+    100%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        opacity: 1
+
+
+// prueba salida
+.scale-out-center
+    -webkit-animation: scale-out-center 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both
+    animation: scale-out-center 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-12-19 20:34:43
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ----------------------------------------------
+
+/**
+ * ----------------------------------------
+ * animation scale-out-center
+ * ----------------------------------------
+@-webkit-keyframes scale-out-center
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+@keyframes scale-out-center
+  0%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    opacity: 1
+
+  100%
+    -webkit-transform: scale(0)
+    transform: scale(0)
+    opacity: 1
+
+
+app-principal-button
+    width: 100%
+    height: 100%
+    display: block
+    animation: fadeIn
+    animation-duration: 2.5s
+
+
+
+.salidaSaludos
+    // animate__fadeOutUp
+    animation: fadeOutUp
+    animation-duration: 1s
+
+
+
+app-animate-text
+    width: 100%
+    height: 100%
+    display: block
+    position: relative
+    top: 25px
+    // padding-left: 1%
+
+
+
+.pruebaTexto
+    color: black
+    font-family: "Bodoni", Arial, Helvetica, sans-serif!important
+    font-size: 80px!important
+
+
+// animaciones del viaje
+
+.beginOut
+    -webkit-animation: beginOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) both
+    animation: beginOut 1s cubic-bezier(0.165, 0.84, 0.44, 1) both
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-1-12 13:38:50
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ----------------------------------------------
+
+/**
+ * ----------------------------------------
+ * animation beginOut
+ * ----------------------------------------
+@-webkit-keyframes beginOut
+    0%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+    100%
+        -webkit-transform: scale(2)
+        transform: scale(2)
+        -webkit-filter: blur(4px)
+        filter: blur(4px)
+        opacity: 0
+
+@keyframes beginOut
+    0%
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+    100%
+        -webkit-transform: scale(2)
+        transform: scale(2)
+        -webkit-filter: blur(4px)
+        filter: blur(4px)
+        opacity: 0
+
+
+.beginOutVideo
+    -webkit-animation: beginOutVideo 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) both
+    animation: beginOutVideo 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) both
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-1-12 13:38:50
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ----------------------------------------------
+
+/**
+ * ----------------------------------------
+ * animation beginOut
+ * ----------------------------------------
+@-webkit-keyframes beginOutVideo
+    0%
+        -webkit-transform: scale(1) rotate(180deg)
+        transform: scale(1) rotate(180deg)
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+    100%
+        -webkit-transform: scale(2) rotate(180deg)
+        transform: scale(2) rotate(180deg)
+        -webkit-filter: blur(4px)
+        filter: blur(4px)
+        opacity: 0
+
+@keyframes beginOutVideo
+    0%
+        -webkit-transform: scale(1) rotate(180deg)
+        transform: scale(1) rotate(180deg)
+        -webkit-filter: blur(0px)
+        filter: blur(0px)
+        opacity: 1
+    100%
+        -webkit-transform: scale(2) rotate(180deg)
+        transform: scale(2) rotate(180deg)
+        -webkit-filter: blur(4px)
+        filter: blur(4px)
+        opacity: 0
+
+
+
+.enterVr
+    -webkit-animation: enterVr 1s ease-in-out alternate forwards
+    animation: enterVr 1s ease-in-out alternate forwards
+    visibility: visible!important
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-1-23 19:7:46
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ----------------------------------------------
+
+/**
+ * ----------------------------------------
+ * animation enterVr
+ * ----------------------------------------
+@-webkit-keyframes enterVr
+    0%
+        -webkit-transform: translateY(50px)
+        transform: translateY(50px)
+        opacity: 0
+    100%
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
+
+@keyframes enterVr
+    0%
+        -webkit-transform: translateY(50px)
+        transform: translateY(50px)
+        opacity: 0
+    100%
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
+
+.textLogo
+    position: relative
+    display: block
+    img.gifVR
+        height: 75px!important
+        position: absolute
+        right: 0
+        left: 0
+        bottom: -15px
+        visibility: hidden
+
+
+
+.skipeControl
+    position: absolute
+    z-index: 9999
+    display: flex
+    right: 5%
+    bottom: 5%
+    .buttonControl
+        display: block

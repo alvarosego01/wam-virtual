@@ -1,0 +1,101 @@
+
+
+<a-scene
+id="project"
+project
+cursor="rayOrigin: mouse; fuse: false"
+color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights: true"
+physics
+>
+<a-assets>
+
+
+   <img id="room1" src="./assets/files/images//recorrido/sector1/plaza.jpg" crossorigin="anonymous"/>
+
+   <a-asset-item id="_element_transparentScreen" src="./assets/files/3dmodel/stands/horizontal-screen/PantallaMenuRojaTransparente.gltf" ></a-asset-item>
+
+</a-assets>
+
+
+
+<!-- cielo -->
+<a-sky  position="0 1 0" id="skybox" rotation="0 0 0"  scale="-0.055 0.055 0.055" src="#room1"></a-sky>
+
+<!-- luces (DE PRUEBA) -->
+<a-entity  id="luz1" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 1.5" position="-14.70455 5 0"></a-entity>
+<a-entity  id="luz2" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 1.5" position="14.5 5.09939 0.02139"></a-entity>
+<a-entity  id="luz3" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 1.5" position="-1 5 -16.54709"></a-entity>
+<a-entity  id="luz4" scale="7.5 7.5 7.5" light="color: #FFF; intensity: 1.5" position="-1 5 15.87778"></a-entity>
+
+
+
+<a-plane id="ground" static-body="sphereRadius: 28"  static-body  material="opacity: 0.0; transparent: true" width="100" height="100" rotation="-90 0 0" position="0 -2 0"></a-plane>
+
+
+
+
+<!-- <a-cylinder position="0 1 0" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+
+
+<a-entity id="objetsSignals" objetsSignals position="0 0 0">
+
+  <a-entity class="scenario1" id="screens-room1" position="0 0 0">
+
+    <a-entity id="objs_entity11"  position="3.12254 -2 -6.78984" rotation="0 57.58970686198444 0">
+
+
+      <a-gltf-model static-body  id="objectSignal11" static-body="sphereRadius: NaN" static-body rotation="0.002864788975654116 0 0.0005729577951308233" position="0 0 0" scale="0.01 0.05 0.05" src="#_element_transparentScreen"  renderer="antialias: true;
+      colorManagement: true;
+      physicallyCorrectLights: true;" ></a-gltf-model>
+
+
+      <a-box position="0 1.75 0" id="boxforScreenTransparent" rotation="0 -88.0406947998023 0" material="opacity: 0.0; transparent: true" geometry="width: 5; depth: 1; height: 4" spot="linkto:menuBack;type:url" color="tomato" >
+
+      </a-box>
+
+
+
+    </a-entity>
+
+  </a-entity>
+
+</a-entity>
+
+
+<!--
+<a-entity
+  id="background"
+  position="0 0 0"
+  geometry="primitive: sphere; radius: 2.0"
+  material="color: red; side: back; shader: flat"
+  scale="0.001 0.001 0.001"
+  visible="false" class="raycastable">
+</a-entity> -->
+
+<!-- camara -->
+
+<a-entity id="rig" velocity="0 -3.2666666666666666 0" position-listener camera_reader  kinematic-body  position="0 -1 0" >
+
+
+  <a-entity camara id="cam" camera="fov:80" position="0 3 0" mouse-cursor look-controls="pointerLockEnabled: true;"
+  animation__zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
+  animation__zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;">
+
+  <!-- cursor="fuse:true;fuseTimeout:2000" -->
+    <!-- mouse-cursor -->
+    <a-cursor fuse="false" color="#000000"></a-cursor>
+
+
+
+<a-plane id="camfadeplane" rotation="10 0.5 0" position="0 0 -0.5" material="color:#000000;transparent:true;opacity:0" width="2" height="2"
+animation__fadein="property:material.opacity;to:1;dur:2000;startEvents:camFadeIn"
+animation__fadeout="property:material.opacity;to:0;dur:200;startEvents:camFadeOut"></a-plane>
+
+
+  </a-entity>
+
+</a-entity>
+
+
+
+</a-scene>

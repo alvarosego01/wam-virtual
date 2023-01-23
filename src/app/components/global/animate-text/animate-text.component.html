@@ -1,0 +1,60 @@
+<div class="central"
+(animationend)="animacionEnd($event)"
+>
+
+<svg [ngClass]="{'go': ( this.reveal == true )? true: false}" class="intro {{ this.typeTitle }} ">
+
+  <!--  -->
+  <text
+    x="10" y="30"
+    class="text text-stroke titulo" clip-path="url(#text1)" *ngIf="this.titulo != null">{{ this.titulo }}
+
+  </text>
+
+  <text x="10" y="50" class="text text-stroke subTitulo" clip-path="url(#text2)"
+    *ngIf="this.subTitulo != null">{{ this.subTitulo }}</text>
+
+    <!--  -->
+  <text
+
+    x="10" y="30"
+    class="text text-stroke text-stroke-2 titulo" clip-path="url(#text1)"
+    *ngIf="this.titulo != null">{{ this.titulo }}</text>
+  <text x="10" y="50" class="text text-stroke text-stroke-2 subTitulo" clip-path="url(#text2)"
+    *ngIf="this.subTitulo != null">{{ this.subTitulo }}</text>
+
+  <defs>
+    <clipPath id="text1">
+      <text
+
+        x="10" y="30"
+        class="text titulo" *ngIf="this.titulo != null">{{ this.titulo }}</text>
+    </clipPath>
+    <clipPath id="text2">
+      <text x="10" y="50" class="text subTitulo" *ngIf="this.subTitulo != null">{{ this.subTitulo }}</text>
+    </clipPath>
+
+  </defs>
+
+  <!-- <text text-anchor="start" x="10" y="30" class="text text-stroke" clip-path="url(#text1)">Where</text>
+    <text text-anchor="start" x="10" y="50" class="text text-stroke" clip-path="url(#text2)">Ideas</text>
+    <text text-anchor="start" x="10" y="70" class="text text-stroke" clip-path="url(#text3)">Begin.</text>
+    <text text-anchor="start" x="10" y="30" class="text text-stroke text-stroke-2" clip-path="url(#text1)">Where</text>
+    <text text-anchor="start" x="10" y="50" class="text text-stroke text-stroke-2" clip-path="url(#text2)">Ideas</text>
+    <text text-anchor="start" x="10" y="70" class="text text-stroke text-stroke-2" clip-path="url(#text3)">Begin.</text>
+    <defs>
+      <clipPath id="text1">
+        <text text-anchor="start" x="10" y="30" class="text">Where</text>
+      </clipPath>
+      <clipPath id="text2">
+        <text text-anchor="start" x="10" y="50" class="text">Ideas</text>
+      </clipPath>
+      <clipPath id="text3">
+        <text text-anchor="start" x="10" y="70" class="text">Begin.</text>
+      </clipPath>
+    </defs> -->
+
+
+  </svg>
+
+</div>

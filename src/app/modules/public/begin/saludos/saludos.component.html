@@ -1,0 +1,163 @@
+<div class="saludos" (animationend)="animacionEnd($event)">
+
+  <div class="extra">
+
+
+    <div class="left">
+
+      <span
+      *ngIf="this.saludosCirculo[1].status != null"
+      class="textWelcome2 "
+      [ngClass]="{'enterText2': (this.saludosCirculo[1].status == 'enter' )? true: false,
+                'outText2': (this.saludosCirculo[1].status == 'exit')? true: false}"
+      >
+        <small>
+          Welcome
+        </small>
+
+      </span>
+
+      <span
+      *ngIf="this.saludosCirculo[2].status != null"
+      class="textWelcome2 "
+      [ngClass]="{'enterText2': (this.saludosCirculo[2].status == 'enter' )? true: false,
+                'outText2': (this.saludosCirculo[2].status == 'exit')? true: false}"
+      >
+        <small>
+          Bienvenue
+        </small>
+
+      </span>
+
+      <span
+      *ngIf="this.saludosCirculo[3].status != null"
+      class="textWelcome2 "
+      [ngClass]="{'enterText2': (this.saludosCirculo[3].status == 'enter' )? true: false,
+                'outText2': (this.saludosCirculo[3].status == 'exit')? true: false}"
+      >
+        <small>
+          Benvenuti
+        </small>
+
+      </span>
+
+    </div>
+
+
+    <div class="center">
+
+      <span
+      *ngIf="this.saludosCirculo[0].status != null"
+      class="principalText textWelcome "
+      [ngClass]="{'enterText': (this.saludosCirculo[0].status == 'enter' )? true: false,
+                'outText': (this.saludosCirculo[0].status == 'exit')? true: false}"
+      >
+        <small>
+          Bienvenidos
+        </small>
+
+      </span>
+
+
+      <!-- <div class="centerAnimation">
+
+        <span
+        *ngFor="let item of this.saludosCirculo; let i = index"
+        class="textWelcome2 {{ this.saludosCirculo[i].class }}" >
+
+
+          <small
+          *ngIf="this.saludosCirculo[i].status == 'enter' "
+
+          >
+            {{ item.name }}
+          </small>
+
+        </span>
+
+      </div> -->
+
+
+    </div>
+
+
+    <div class="right">
+
+      <span
+      *ngIf="this.saludosCirculo[4].status != null"
+      class="textWelcome2 "
+      [ngClass]="{'enterText2': ( this.saludosCirculo[4].status ==  'enter' )? true: false,
+                'outText2': (this.saludosCirculo[4].status == 'exit')? true: false}"
+      >
+        <small>
+          Willkommen
+        </small>
+
+      </span>
+
+      <span
+      *ngIf="this.saludosCirculo[5].status != null"
+      class="textWelcome2 "
+      [ngClass]="{'enterText2': ( this.saludosCirculo[5].status ==  'enter' )? true: false,
+                'outText2': (this.saludosCirculo[5].status == 'exit')? true: false}"
+      >
+        <small>
+          Добро пожаловать
+        </small>
+
+      </span>
+
+      <span
+      *ngIf="this.saludosCirculo[6].status != null"
+      class="textWelcome2 "
+      [ngClass]="{'enterText2': ( this.saludosCirculo[6].status ==  'enter' )? true: false,
+                'outText2': (this.saludosCirculo[6].status == 'exit')? true: false}"
+      >
+        <small>
+          欢迎
+        </small>
+
+      </span>
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <!-- <div class="circle-container"
+    >
+
+        <span
+        *ngIf="this.saludosCirculo; .status != null"
+        class="textWelcome2 "
+        *ngFor="let item of this.saludosCirculo; let i = index"
+        [ngClass]="{
+            'saludoCentro': (item.status == false)? true: false,
+                        '(outText2': thistatus == false)? == 'exit? true: false')s.
+        }"
+        >
+        <small class="animate__animated" [ngClass]="{
+            'animate__fadeInDown': ( this.endSaludos == true )? true : false,
+            'endSaludos': ( this.endSaludos == true )? true: false,
+                    'outText2': (this.endSaludos == true )? == 'exit')? true: false}"
+        class="animate__animated animate__fadeIn"
+        >
+            {{ item.name }}
+        </small>
+
+        </span>
+
+
+    </div> -->
+
+
+
+
+
+
+</div>

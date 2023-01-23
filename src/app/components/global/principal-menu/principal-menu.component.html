@@ -1,0 +1,141 @@
+<!-- *ngIf="this.ready == true" -->
+<section id="principalStartMenu">
+  <div class="digitalInterface showDigitalMenu">
+    <div #father class="centralFather point">
+      <img
+        class="fatherCircle"
+        src="./assets/files/elements/digital-menu/facircle2.png"
+        alt=""
+      />
+
+      <div class="logoCircle">
+        <img
+          class="imgLogo"
+          src="./assets/files/elements/iconsLogos/isotipoPlatinum.png"
+          alt=""
+        />
+
+        <img src="./assets/files/elements/gifs/vr.gif" alt="" class="vr" />
+      </div>
+    </div>
+
+    <div class="childsNodes">
+      <ul class="elements">
+        <li
+          #items
+          style="right: 25%; top: 10%"
+          (click)="this.goSector('/public/promo')"
+          class="item big-digitalElement item1 point"
+        >
+          <img [src]="this.miniCircle" alt="" />
+          <span>
+            <i class="fas fa-play"></i>
+          </span>
+
+          <h6 class="textLabel appearText">Encuentros internacionales</h6>
+        </li>
+
+        <li
+          #items
+          style="left: 30%; top: 65%"
+          class="item big-digitalElement item1 point"
+        >
+          <img [src]="this.miniCircle" alt="" />
+          <span>
+            <i class="fas fa-globe"></i>
+          </span>
+
+          <h6 class="textLabel appearText">Inicio presentación</h6>
+        </li>
+        <li
+          #items
+          style="left: 25.5%; top: 20%"
+          class="item small-digitalElement item1 point"
+        >
+          <img [src]="this.miniCircle" alt="" />
+          <span>
+            <i class="fas fa-gamepad"></i>
+          </span>
+
+          <h6 class="textLabel appearText">Zargame</h6>
+        </li>
+        <li
+          #items
+          style="left: 46%; top: 5%"
+          class="item small-digitalElement item1 point"
+        >
+          <img [src]="this.miniCircle" alt="" />
+          <span>
+            <i class="fas fa-calendar"></i>
+          </span>
+
+          <h6 class="textLabel appearText">Temporadas compañias</h6>
+        </li>
+        <li
+          (click)="this.goSector('/public/hall')"
+          #items
+          style="left: 60%; top: 70%"
+          class="item big-digitalElement item1 point"
+        >
+          <img [src]="this.miniCircle" alt="" />
+          <span>
+            <i class="fas fa-music"></i>
+          </span>
+
+          <h6 class="textLabel appearText">Mundo zarzuela</h6>
+        </li>
+
+        <li
+          #items
+          style="right: 28%; top: 40%"
+          class="item small-digitalElement item1 point"
+        >
+          <img [src]="this.miniCircle" alt="" />
+          <span>
+            <i class="fas fa-users"></i>
+          </span>
+
+          <h6 class="textLabel appearText">Patronos</h6>
+        </li>
+      </ul>
+
+      <div class="lines">
+        <div #lines class="line">
+          <div class="spaceTo"></div>
+          <div class="spaceLine"></div>
+          <div class="spaceFrom"></div>
+        </div>
+
+        <div #lines class="line">
+          <div class="spaceTo"></div>
+          <div class="spaceLine"></div>
+          <div class="spaceFrom"></div>
+        </div>
+
+        <div #lines class="line">
+          <div class="spaceTo"></div>
+          <div class="spaceLine"></div>
+          <div class="spaceFrom"></div>
+        </div>
+
+        <div #lines class="line">
+          <div class="spaceTo"></div>
+          <div class="spaceLine"></div>
+          <div class="spaceFrom"></div>
+        </div>
+
+        <div #lines class="line">
+          <div class="spaceTo"></div>
+          <div class="spaceLine"></div>
+          <div class="spaceFrom"></div>
+        </div>
+
+        <div #lines class="line">
+          <div class="spaceTo"></div>
+          <div class="spaceLine"></div>
+          <div class="spaceFrom"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

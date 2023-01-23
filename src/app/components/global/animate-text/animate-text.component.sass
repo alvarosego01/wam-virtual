@@ -1,0 +1,106 @@
+
+
+@import "generals"
+
+
+// body
+  // height: 100vh
+  // padding: 0
+  // margin: 0
+  // background: #4a2667
+
+svg.intro
+    // background: linear-gradient(135deg, #aa3bb1, #582a7e)
+    // max-width: auto
+    // width: auto
+    display: block
+    margin: 0 auto
+    overflow: visible
+    min-width: 580px
+    .text
+        display: none
+    &.go
+        .text
+            // font-family: Arial, sans-serif
+            // font-size: 20px
+            // text-transform: uppercase
+            display: block
+            // font-family: "Bodoni", Arial, Helvetica, sans-serif!important
+        .text-stroke
+            fill: none
+            stroke: black
+            // stroke-width: 25px
+            stroke-dashoffset: -900
+            stroke-dasharray: 900
+            stroke-linecap: butt
+            stroke-linejoin: round
+            animation: dash 3s ease-in-out forwards
+            &:nth-child(2)
+              animation-delay: 0.3s
+            &:nth-child(3)
+              animation-delay: 0.9s
+        .text-stroke-2
+            stroke: $platinoColor
+            animation-delay: 1.2s
+        .text-stroke
+            &:nth-child(5)
+              animation-delay: 1.5s
+            &:nth-child(6)
+              animation-delay: 1.8s
+@keyframes dash
+    100%
+        stroke-dashoffset: 0
+
+// .reload
+//   position: absolute
+//   bottom: 15px
+//   right: 15px
+//   background: #fff
+//   border: none
+//   border-radius: 20px
+//   outline: none !important
+//   font-size: 11px
+//   line-height: 1.5
+//   padding: 8px 12px
+//   text-transform: uppercase
+//   z-index: 10
+//   cursor: pointer
+//   box-shadow: 0 6px 7px #350e4c
+//   transition: all 0.1s cubic-bezier(0.67, 0.13, 0.1, 0.81)
+
+//   &:hover
+//     box-shadow: 0 4px 4px #350e4c
+//     transform: translateY(1px)
+
+//   &:active
+//     box-shadow: 0 1px 2px #244b94
+//     transform: translateY(2px)
+
+//   svg
+//     vertical-align: middle
+//     position: relative
+//     top: -2px
+
+
+
+// .bodoniFont
+  // font-family: "Bodoni", Arial, Helvetica, sans-serif!important
+
+
+
+.central
+    width: fit-content
+    position: relative
+    margin: 0 auto
+
+
+.vr
+    color: $platinoColor
+    font-size: 44px
+    color: #bdbabb
+    font-size: 44px
+    position: absolute
+    right: -18%
+    top: 0
+    font-family: "Bodoni", Arial, Helvetica, sans-serif!important
+
