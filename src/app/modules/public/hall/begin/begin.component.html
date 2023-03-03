@@ -1,6 +1,6 @@
 <a-scene
   *ngIf="this.showHall == true"
-  id="project"
+  id="_hall_p1_project"
   raycaster="direction: -0.8943443549351866 -0.4371620785303717 -0.09506572405746469; origin: 33.462142041774314 29.531055779619802 26.460132471633557"
   project
   cursor="rayOrigin: mouse; fuse: false"
@@ -199,7 +199,7 @@
   <!-- cielo -->
   <a-sky
     position="0 1 0.12085"
-    id="skybox"
+    id="_hall_p1_skybox"
     rotation="0 0 0"
     scale="-0.055 0.055 0.055"
     src="#room1"
@@ -207,32 +207,32 @@
 
   <!-- luces (DE PRUEBA) -->
   <a-entity
-    id="luz1"
+    id="_hall_p1_luz1"
     scale="7.5 7.5 7.5"
     light="color: #FFF; intensity: 1.5"
     position="-14.70455 5 0"
   ></a-entity>
   <a-entity
-    id="luz2"
+    id="_hall_p1_luz2"
     scale="7.5 7.5 7.5"
     light="color: #FFF; intensity: 1.5"
     position="14.5 5.09939 0.02139"
   ></a-entity>
   <a-entity
-    id="luz3"
+    id="_hall_p1_luz3"
     scale="7.5 7.5 7.5"
     light="color: #FFF; intensity: 1.5"
     position="-1 5 -16.54709"
   ></a-entity>
   <a-entity
-    id="luz4"
+    id="_hall_p1_luz4"
     scale="7.5 7.5 7.5"
     light="color: #FFF; intensity: 1.5"
     position="-1 5 15.87778"
   ></a-entity>
 
   <a-plane
-    id="ground"
+    id="_hall_p1_ground"
     static-body="sphereRadius: 28"
     static-body
     material="opacity: 0.0; transparent: true"
@@ -246,11 +246,11 @@
 
   <!-- <a-cylinder static-body position="0 -2 0" radius="0.25" height="0.1" color="#FFC65D" shadow></a-cylinder> -->
 
-  <a-entity id="objetsSignals" objetsSignals position="0 0 0">
+  <a-entity id="_hall_p1_objetsSignals" _hall_p1_objetsSignals position="0 0 0">
     <a-entity class="scenario1" id="screens-room1" position="0 0 0">
       <a-entity
-        id="objs_entity11"
-        position="4.43614 -2 -0.04333"
+        id="_hall_p1_objs_et11"
+        position="6.81362 -2 0.18002"
         rotation="0 0 0"
       >
         <a-gltf-model
@@ -259,8 +259,8 @@
           id="objectSignal11"
           static-body="sphereRadius: NaN"
           static-body
-          rotation="0.002864788975654116 0 0.0005729577951308233"
-          position="0 0 0"
+          rotation="0.002864788975654116 -27.5 0.0005729577951308233"
+          position="1.15332 0 2.2315"
           scale="0.012 0.065 0.065"
           src="#_element_transparentScreen"
           renderer="antialias: true;
@@ -380,12 +380,12 @@
         </a-entity>
       </a-entity>
 
-      <a-entity id="objs_entity12" position="0 -2 0" rotation="0 0 0">
-        <a-entity id="objs_signals_1" class="walls" position="0 0 0">
+      <a-entity id="_hall_p1_objs_et12" position="0 -2 0" rotation="0 0 0">
+        <a-entity id="_hall_p1_objs_signals_1" class="walls" position="0 0 0">
           <a-gltf-model
             static-body
             position="6.1548 3.0349 -26.27873"
-            id="objs_signals_1_1"
+            id="_hall_p1_objs_signals_1_1"
             scale="0.25 0.25 0.1"
             rotation="0 -101.31899170195913 0"
             src="#_signal_wall"
@@ -394,35 +394,35 @@
           <a-gltf-model
             static-body
             position="-26.75377 4.05038 -3.60823"
-            id="objs_signals_1_2"
+            id="_hall_p1_objs_signals_1_2"
             scale="0.25 0.25 0.1"
             rotation="0 -4.770446602259234 0"
             src="#_signal_wall"
           ></a-gltf-model>
         </a-entity>
 
-        <a-entity id="objs_signals_2" class="top" position="0 7.5 0">
+        <a-entity id="_hall_p1_objs_signals_2" class="top" position="0 7.5 0">
           <a-gltf-model
             position="-16.66154 0 1.15034"
-            id="objs_signals_2_1"
+            id="_hall_p1_objs_signals_2_1"
             scale="0.25 1.5 1.5"
             rotation="0 -90 0"
             src="#_signal_top"
           ></a-gltf-model>
           <a-gltf-model
             position="-1.42261 0 -11.13346"
-            id="objs_signals_2_2"
+            id="_hall_p1_objs_signals_2_2"
             scale="0.25 1.5 1.5"
             rotation="0 180 0"
             src="#_signal_top"
           ></a-gltf-model>
         </a-entity>
 
-        <a-entity id="objs_signals_3" class="posters" position="0 0 0">
+        <a-entity id="_hall_p1_objs_signals_3" class="posters" position="0 0 0">
           <a-gltf-model
             static-body
-            position="4.34193 0 -5.78059"
-            id="objs_signals_3_1"
+            position="10.2998 0 -3.4588"
+            id="_hall_p1_objs_signals_3_1" static-body="sphereRadius: NaN"
             scale="0.025 0.025 0.01"
             rotation="0 -90 0"
             src="#_signal_poster_small"
@@ -431,7 +431,7 @@
           <a-gltf-model
             static-body
             position="-22.04019 0 9.43374"
-            id="objs_signals_3_3"
+            id="_hall_p1_objs_signals_3_3"
             static-body="sphereRadius: NaN"
             scale="0.55 0.45 0.1"
             rotation="0 117.12918910079907 0"
@@ -439,11 +439,11 @@
           ></a-gltf-model>
         </a-entity>
 
-        <a-entity id="objs_signals_4" class="flags" position="0 0 0">
+        <a-entity id="_hall_p1_objs_signals_4" class="flags" position="0 0 0">
           <a-gltf-model
             static-body
             position="-22.98111 0 -7.74604"
-            id="objs_signals_4_1"
+            id="_hall_p1_objs_signals_4_1"
             static-body="sphereRadius: NaN"
             scale="0.05 0.035 0.004"
             rotation="0 52.8731182924675 0"
@@ -454,217 +454,17 @@
     </a-entity>
   </a-entity>
 
-  <a-entity id="objectInteract" objectInteract position="0 0 0">
-    <a-entity class="scenario1" id="objectInteract-room1" position="0 0 0">
+  <a-entity id="_hall_p1_stands" _hall_p1_stands position="0 0 0">
+    <a-entity class="scenario1" id="_hall_p1_stands-room1" position="0 0 0">
+
       <a-entity
-        id="objectInteract_entity13"
-        position="-12.39296 -2 15.7424"
-        rotation="0 -2.968494336572795 0"
-      >
-        <!-- kiosko -->
-        <a-gltf-model
-          static-body
-          id="objectInteract13"
-          static-body="sphereRadius: NaN"
-          static-body
-          rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
-          position="0 0 0"
-          scale="1.5 1.5 1.5"
-          src="#_element_kiosko"
-        ></a-gltf-model>
-
-        <!-- logo frontal -->
-        <a-entity
-          id="assetsObjectsInteract132"
-          scale="1 1 1"
-          position="-0.15358 1.42714 -1.82278"
-        >
-          <a-image
-            position="0 0 0"
-            id="imageObjectInteract133"
-            scale="2 2 2"
-            rotation="0 -174.86557315833699 0"
-            material="src: #logobecknammSquare"
-          ></a-image>
-        </a-entity>
-
-        <!-- pendones -->
-        <a-entity
-          id="assetsObjectsInteract131"
-          rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
-          position="0 2.784 0"
-        >
-          <a-image
-            position="0.06116 -4.69823 0.98954"
-            id="imageObjectInteract131"
-            scale="4.25 1.25 1"
-            rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
-            material="src: #logobecknnamLarge"
-          ></a-image>
-          <a-image
-            position="0.07224 4.59354 1.57875"
-            id="imageObjectInteract132"
-            scale="4.25 1.25 1"
-            rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
-            material="src: #logobecknnamLarge"
-          ></a-image>
-        </a-entity>
-
-        <!-- pantalas de video -->
-        <a-entity
-          id="assetsObjectsInteractVideos131"
-          rotation="0 5.613840476691806 0"
-          position="-0.0207 3.5 -0.39912"
-        >
-          <a-video
-            (click)="openVideoScreen('beckmann')"
-            video_view
-            class="clickeable"
-            goclick
-            openvideo="beckmann"
-            id="assetsObjectsInteractVideo1_3_1"
-            rotation="0 180 0"
-            geometry="height: 1.1; width: 1.9"
-            src="#videoBecknamm"
-            position="2.502 0.213 -0.146"
-          ></a-video>
-
-          <a-video
-            (click)="openVideoScreen('beckmann')"
-            video_view
-            class="clickeable"
-            goclick
-            openvideo="beckmann"
-            id="assetsObjectsInteractVideo1_3_2"
-            rotation="0 180 0"
-            geometry="height: 1.1; width: 1.9"
-            src="#videoBecknamm"
-            position="-2.71264 0.224 -0.06844"
-          ></a-video>
-        </a-entity>
-
-        <!-- otros elementos -->
-        <a-entity
-          id="_othersElements1_3_1"
-          rotation="0 8.172669989746062 0"
-          position="-0.24215 0.32258 -2.31806"
-        >
-          <a-entity
-            id="_othersElement1_3_1"
-            position="2.79343 0 -0.03144"
-            rotation="0 0 0"
-            static-body="sphereRadius: NaN"
-            static-body
-          >
-            <a-gltf-model
-              id="_oagaveElement1_3_1"
-              rotation="0 0 0"
-              position="0.10835 0.38156 0.07601"
-              scale="1 1 1"
-              src="#_element_agave"
-            >
-            </a-gltf-model>
-
-            <a-entity
-              id="_oElement1_3_1"
-              material="color: #c37349"
-              geometry="height: 0.3; width: 0.4; depth: 0.4"
-              position="-0.00026 0.25 0.00061"
-            ></a-entity>
-            <a-entity
-              id="_oElement1_3_2"
-              scale="1 1 1"
-              rotation="-90 0 0"
-              material="color: #4e3b31"
-              geometry="primitive: plane; radius: 1; width: 0.35; height: 0.35"
-              position="0 0.40294 0"
-            ></a-entity>
-          </a-entity>
-          <a-entity
-            id="_othersElement1_3_2"
-            position="-2.81807 0 -0.25667"
-            static-body="sphereRadius: NaN"
-            static-body
-          >
-            <a-gltf-model
-              id="_oagaveElement1_3_2"
-              rotation="0 104.46968661738352 0"
-              position="0.12562 0.38156 -0.11356"
-              scale="1 1 1"
-              src="#_element_agave"
-            ></a-gltf-model>
-
-            <a-entity
-              id="_oElement1_3_3"
-              material="color: #c37349"
-              geometry="height: 0.3; width: 0.4; depth: 0.4"
-              position="-0.00026 0.25 0.00061"
-            ></a-entity>
-            <a-entity
-              id="_oElement1_3_4"
-              scale="1 1 1"
-              rotation="-90 0 0"
-              material="color: #4e3b31"
-              geometry="primitive: plane; radius: 1; width: 0.35; height: 0.35"
-              position="-0.00664 0.40497 0.00148"
-            ></a-entity>
-          </a-entity>
-        </a-entity>
-        <a-entity
-          id="_othersElements1_3_3"
-          rotation="0 -172.8493346772716 0"
-          position="-1.87277 2.39907 -1.26586"
-        >
-          <a-gltf-model
-            static-body
-            id="_botellaElement1_3_1"
-            static-body="sphereRadius: NaN"
-            position="0.06906 0 -0.00236"
-            rotation="0 0 0"
-            scale="3 3 3"
-            src="#_element_botella_jc1"
-            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
-          ></a-gltf-model>
-          <a-gltf-model
-            static-body
-            id="_botellaElement1_3_2"
-            position="-0.21261 0 -0.00597"
-            rotation="0 0 0"
-            scale="3 3 3"
-            src="#_element_botella_jc1"
-            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
-          ></a-gltf-model>
-          <a-gltf-model
-            static-body
-            id="_botellaElement1_3_3"
-            position="-0.49415 0 -0.00929"
-            rotation="0 0 0"
-            scale="3 3 3"
-            src="#_element_botella_jc1"
-            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
-          ></a-gltf-model>
-          <a-gltf-model
-            static-body
-            id="_botellaElement1_3_4"
-            static-body="sphereRadius: NaN"
-            position="-0.7651 0 -0.01115"
-            rotation="0 0 0"
-            scale="3 3 3"
-            src="#_element_botella_jc1"
-            renderer="antialias:true; colorManagement:true; physicallyCorrectLights:true;"
-          ></a-gltf-model>
-        </a-entity>
-      </a-entity>
-
-      <!--  -->
-      <a-entity
-        id="objectInteract_entity12"
-        position="1.15882 -2 14.86626"
-        rotation="0 -5.8957357118961715 0"
+        id="_hall_p1_stands_1"
+        position="1.57836 -2 11.54111"
+        rotation="0 40 0"
       >
         <a-gltf-model
           static-body
-          id="objectInteract12"
+          id="_hall_p1_stands_model" static-body="sphereRadius: NaN"
           rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
           position="0 0 0"
           scale="1.5 1.5 1.5"
@@ -672,42 +472,44 @@
         ></a-gltf-model>
 
         <a-entity
-          id="assetsObjectsInteract122"
+          id="_hall_p1_stand_frontal_image"
           scale="1 1 1"
           position="-0.15358 1.42714 -1.82278"
         >
           <a-image
             position="0 0 0"
-            id="imageObjectInteract123"
+            id="stand_frontal_image"
             scale="2 2 2"
             rotation="0 -174.86557315833699 0"
             material="src: #logoZarzuelaSquare"
           ></a-image>
+
         </a-entity>
 
         <a-entity
-          id="assetsObjectsInteract121"
+          id="_hall_p1_stand_backFlags"
           rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
           position="0 2.784 0"
         >
           <a-image
             position="0.06116 -4.69823 0.98954"
-            id="imageObjectInteract121"
+            id="stand_back_flag_1"
             scale="4.25 1.25 1"
             rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
             material="src: #logoZarzuelaLarge"
           ></a-image>
           <a-image
             position="0.07224 4.59354 1.57875"
-            id="imageObjectInteract122"
+            id="stand_back_flag_2"
             scale="4.25 1.25 1"
             rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
             material="src: #logoZarzuelaLarge"
           ></a-image>
+
         </a-entity>
 
         <a-entity
-          id="assetsObjectsInteractVideos121"
+          id="_hall_p1_stand_videoScreens"
           rotation="0 5.613840476691806 0"
           position="-0.0207 3.5 -0.39912"
         >
@@ -717,7 +519,7 @@
             class="clickeable"
             goclick
             openvideo="zarzuela"
-            id="assetsObjectsInteractVideo1_2_1"
+            id="stand_back_screen_1"
             rotation="0 180 0"
             geometry="height: 1.1; width: 1.9"
             src="#videoZarzuela"
@@ -730,7 +532,7 @@
             class="clickeable"
             goclick
             openvideo="zarzuela"
-            id="assetsObjectsInteractVideo1_2_2"
+            id="stand_back_screen_2"
             rotation="0 180 0"
             geometry="height: 1.1; width: 1.9"
             src="#videoZarzuela"
@@ -738,23 +540,193 @@
           ></a-video>
         </a-entity>
       </a-entity>
-    </a-entity>
-  </a-entity>
 
-  <a-entity id="screenStands" screenStands position="0 0 0">
-    <a-entity class="scenario1" id="screens-room1" position="0 0 0">
       <a-entity
-        id="sc_entity11"
-        position="9.6745 -2 -21.93707"
-        rotation="0 93.89575050824418 0"
+        id="_hall_p1_stands_2"
+        position="-12.64431 -2 15.77187"
+        rotation="0 -5.8957357118961715 0"
       >
         <a-gltf-model
           static-body
-          id="screen11"
+          id="_hall_p1_stands_model"
+          rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
+          position="0 0 0"
+          scale="1.5 1.5 1.5"
+          src="#_element_kiosko"
+        ></a-gltf-model>
+
+        <a-entity
+          id="_hall_p1_stand_frontal_image"
+          scale="1 1 1"
+          position="-0.15358 1.42714 -1.82278"
+        >
+          <a-image
+            position="0 0 0"
+            id="stand_frontal_image"
+            scale="2 2 2"
+            rotation="0 -174.86557315833699 0"
+            material="src: #logoZarzuelaSquare"
+          ></a-image>
+
+        </a-entity>
+
+        <a-entity
+          id="_hall_p1_stand_backFlags"
+          rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
+          position="0 2.784 0"
+        >
+          <a-image
+            position="0.06116 -4.69823 0.98954"
+            id="stand_back_flag_1"
+            scale="4.25 1.25 1"
+            rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+          <a-image
+            position="0.07224 4.59354 1.57875"
+            id="stand_back_flag_2"
+            scale="4.25 1.25 1"
+            rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+
+        </a-entity>
+
+        <a-entity
+          id="_hall_p1_stand_videoScreens"
+          rotation="0 5.613840476691806 0"
+          position="-0.0207 3.5 -0.39912"
+        >
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="stand_back_screen_1"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="2.502 0.213 -0.146"
+          ></a-video>
+
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="stand_back_screen_2"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="-2.71264 0.224 -0.06844"
+          ></a-video>
+        </a-entity>
+      </a-entity>
+
+      <a-entity
+        id="_hall_p1_stands_3"
+        position="-16.84317 -2 -12.97452"
+        rotation="0 224.51 0"
+      >
+        <a-gltf-model
+          static-body
+          id="_hall_p1_stands_model"
+          rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
+          position="0 0 0"
+          scale="1.5 1.5 1.5"
+          src="#_element_kiosko"
+        ></a-gltf-model>
+
+        <a-entity
+          id="_hall_p1_stand_frontal_image"
+          scale="1 1 1"
+          position="-0.15358 1.42714 -1.82278"
+        >
+          <a-image
+            position="0 0 0"
+            id="stand_frontal_image"
+            scale="2 2 2"
+            rotation="0 -174.86557315833699 0"
+            material="src: #logoZarzuelaSquare"
+          ></a-image>
+
+        </a-entity>
+
+        <a-entity
+          id="_hall_p1_stand_backFlags"
+          rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
+          position="0 2.784 0"
+        >
+          <a-image
+            position="0.06116 -4.69823 0.98954"
+            id="stand_back_flag_1"
+            scale="4.25 1.25 1"
+            rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+          <a-image
+            position="0.07224 4.59354 1.57875"
+            id="stand_back_flag_2"
+            scale="4.25 1.25 1"
+            rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+
+        </a-entity>
+
+        <a-entity
+          id="_hall_p1_stand_videoScreens"
+          rotation="0 5.613840476691806 0"
+          position="-0.0207 3.5 -0.39912"
+        >
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="stand_back_screen_1"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="2.502 0.213 -0.146"
+          ></a-video>
+
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="stand_back_screen_2"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="-2.71264 0.224 -0.06844"
+          ></a-video>
+        </a-entity>
+      </a-entity>
+
+    </a-entity>
+
+  </a-entity>
+
+  <a-entity id="_hall_p1_screenStands" _hall_p1_screenStands position="0 0 0">
+    <a-entity class="scenario1" id="_hall_p1_screens-room1" position="0 0 0">
+      <a-entity
+        id="_hall_p1_sc_et11"
+        position="7.77751 -2 -23.05638"
+        rotation="0 100 0"
+      >
+        <a-gltf-model
+          static-body
+          id="_hall_p1_screen11"
           static-body="sphereRadius: NaN"
           static-body
           rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233"
-          position="0 0 0"
+          position="0.1822 0 -0.07429"
           scale="0.5 2 1.8"
           src="#_element_mundoCuervo"
           class="clickeable"
@@ -764,7 +736,7 @@
         ></a-gltf-model>
         <a-gltf-model
           static-body
-          id="screen12"
+          id="_hall_p1_screen12" static-body="sphereRadius: NaN"
           rotation="-0.0011459155902616466 -40.3946704723133 0"
           position="-1.62357 0 2.57277"
           scale="0.5 2 1.8"
@@ -777,13 +749,13 @@
       </a-entity>
 
       <a-entity
-        id="sc_entity12"
+        id="_hall_p1_sc_et12"
         position="-12.28728 -2 -19.57883"
         rotation="0 153.30173358079333 0"
       >
         <a-gltf-model
           static-body
-          id="screen13"
+          id="_hall_p1_screen13"
           rotation="0.002864788975654116 -24.706513083836228 0.0005729577951308233"
           position="0 0 0"
           scale="0.5 2 1.8"
@@ -792,7 +764,7 @@
         ></a-gltf-model>
         <a-gltf-model
           static-body
-          id="screen14"
+          id="_hall_p1_screen14"
           rotation="-0.0011459155902616466 -40.3946704723133 0"
           position="-1.57429 0 2.82563"
           scale="0.5 2 1.8"
@@ -802,13 +774,13 @@
       </a-entity>
 
       <a-entity
-        id="sc_entity13"
+        id="_hall_p1_sc_et13"
         position="-6.14624 -2 12.23303"
         rotation="0 -164.44289790711218 0"
       >
         <a-gltf-model
           static-body
-          id="screen15"
+          id="_hall_p1_screen15"
           rotation="0.002864788975654116 90.2769490741979 0.0005729577951308233"
           position="0 0 0"
           scale="1 1.75 1.5"
@@ -818,13 +790,13 @@
       </a-entity>
 
       <a-entity
-        id="sc_entity14"
+        id="_hall_p1_sc_et14"
         position="-19.29019 -2 12.91485"
         rotation="0 142.42355688243953 0"
       >
         <a-gltf-model
           static-body
-          id="screen16"
+          id="_hall_p1_screen16"
           rotation="0.002864788975654116 95.78937602115155 0.0005729577951308233"
           position="0 0 0"
           scale="1 1.75 1.5"

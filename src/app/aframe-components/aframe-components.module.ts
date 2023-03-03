@@ -2,16 +2,16 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-import { ScreenBoardComponent } from './aframeComponents.index';
-
-
+import { ScreenBoardComponent, StandModelComponent } from './index';
 
 @NgModule({
   declarations: [
-    ScreenBoardComponent
+    ScreenBoardComponent,
+    StandModelComponent
   ],
   exports: [
-    ScreenBoardComponent
+    ScreenBoardComponent,
+    StandModelComponent
   ],
   imports: [
     CommonModule

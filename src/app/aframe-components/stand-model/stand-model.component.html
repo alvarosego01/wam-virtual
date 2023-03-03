@@ -1,0 +1,111 @@
+
+  <a-assets aassets id="aAssets1" timeout="50000">
+    <img
+      id="room1"
+      src="./assets/files/images//hall/begin/lob1.jpg"
+      crossorigin="anonymous"
+    />
+
+    <img
+      id="logoZarzuelaLarge"
+      src="./assets/files/elements/advertising/zarzuelaporelmundo/zarzuelaBanderin.jpg"
+      crossorigin="anonymous"
+    />
+    <img
+      id="logoZarzuelaSquare"
+      src="./assets/files/elements/advertising/zarzuelaporelmundo/zarzuelasquare.jpg"
+      crossorigin="anonymous"
+    />
+
+
+    <a-asset-item
+      id="_element_kiosko"
+      src="./assets/files/3dmodel/stands/kiosko/ChiringuitoFinalColor.gltf"
+    ></a-asset-item>
+
+  </a-assets>
+
+
+   <a-entity
+        id="_hall_p1_stands_1"
+        position="1.57836 -2 11.54111"
+        rotation="0 40 0"
+      >
+        <a-gltf-model
+          static-body
+          id="_hall_p1_stands_model" static-body="sphereRadius: NaN"
+          rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
+          position="0 0 0"
+          scale="1.5 1.5 1.5"
+          src="#_element_kiosko"
+        ></a-gltf-model>
+
+        <a-entity
+          id="_hall_p1_stand_frontal_image"
+          scale="1 1 1"
+          position="-0.15358 1.42714 -1.82278"
+        >
+          <a-image
+            position="0 0 0"
+            id="stand_frontal_image"
+            scale="2 2 2"
+            rotation="0 -174.86557315833699 0"
+            material="src: #logoZarzuelaSquare"
+          ></a-image>
+
+        </a-entity>
+
+        <a-entity
+          id="_hall_p1_stand_backFlags"
+          rotation="2.972505041138711 2.9581810962604407 89.72633663307718"
+          position="0 2.784 0"
+        >
+          <a-image
+            position="0.06116 -4.69823 0.98954"
+            id="stand_back_flag_1"
+            scale="4.25 1.25 1"
+            rotation="-38.88492668214358 -177.5911333897743 179.89786147297102"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+          <a-image
+            position="0.07224 4.59354 1.57875"
+            id="stand_back_flag_2"
+            scale="4.25 1.25 1"
+            rotation="26.35491266042761 -176.50136766343547 -179.67154314389433"
+            material="src: #logoZarzuelaLarge"
+          ></a-image>
+
+        </a-entity>
+
+        <a-entity
+          id="_hall_p1_stand_videoScreens"
+          rotation="0 5.613840476691806 0"
+          position="-0.0207 3.5 -0.39912"
+        >
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="stand_back_screen_1"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="2.502 0.213 -0.146"
+          ></a-video>
+
+          <a-video
+            (click)="openVideoScreen('zarzuela')"
+            video_view
+            class="clickeable"
+            goclick
+            openvideo="zarzuela"
+            id="stand_back_screen_2"
+            rotation="0 180 0"
+            geometry="height: 1.1; width: 1.9"
+            src="#videoZarzuela"
+            position="-2.71264 0.224 -0.06844"
+          ></a-video>
+        </a-entity>
+      </a-entity>
