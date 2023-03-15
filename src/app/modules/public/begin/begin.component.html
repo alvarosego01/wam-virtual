@@ -3,7 +3,7 @@
 
 <!-- <video class="animate__animated videoFondo" [ngClass]="{'beginOutVideo': (this.landingPlanet == true)? true: false}" loop
   muted autoplay id="myVideo">
-  <source src="./assets/files/elements/video/Video Zarzuela.mp4" type="video/mp4">
+  <source src="/assets/files/elements/video/Video Zarzuela.mp4" type="video/mp4">
 </video>
  -->
 
@@ -22,7 +22,7 @@
 
       <li>
         <!-- <a href="">
-          <img src="./assets/files/elements/iconsLogos/Cuervo.png" alt="">
+          <img src="/assets/files/elements/iconsLogos/Cuervo.png" alt="">
 
         </a> -->
       </li>
@@ -31,11 +31,11 @@
 
   </div>
   <div
-  style="background-image: url('./assets/files/images/central_begin_portrait.jpg');"
+  style="background-image: url('/assets/files/images/central_begin_portrait.jpg');"
   class="central">
 
     <div class="advertencia animate__animated " [ngClass]="{'animate__fadeOut': (this.counter.sec >= 5)? true: false }">
-      <img src="./assets/files/elements/iconsLogos/Audi.png" alt="">
+      <img src="/assets/files/elements/iconsLogos/Audi.png" alt="">
       <h6 class="advertencia">
         Para una mejor experiencia, recomendamos <br>
         usar audífonos y apagar las luces
@@ -43,7 +43,7 @@
     </div>
 
     <div *ngIf="this.counter.sec >= 5" class="logo">
-      <img class="animacionLogoEntrada imgLogo" src="./assets/files/elements/iconsLogos/logo_wam_silver.png"
+      <img class="animacionLogoEntrada imgLogo" src="/assets/files/elements/iconsLogos/logo_wam_silver.png"
         alt="">
 
 
@@ -59,7 +59,7 @@
 
       <img
       [ngClass]="{'enterVr': (this.logoVr == true)? true: false}"
-      src="./assets/files/elements/gifs/vr.gif" alt="" class="gifVR">
+      src="/assets/files/elements/gifs/vr.gif" alt="" class="gifVR">
 
 
     </div>

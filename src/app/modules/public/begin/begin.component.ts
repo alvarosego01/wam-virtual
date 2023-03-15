@@ -187,10 +187,10 @@ export class BeginComponent implements OnInit, OnDestroy {
         let animationName = $event.animationName;
         let classList = $event.target.classList;
 
-        console.log('Animacion termina', {
-            animationName,
-            classList: classList
-        });
+        // console.log('Animacion termina', {
+        //     animationName,
+        //     classList: classList
+        // });
 
         if (animationName.includes('scale-out-center') && classList.contains('section')) {
 
