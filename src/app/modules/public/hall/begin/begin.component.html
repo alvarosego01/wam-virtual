@@ -539,6 +539,7 @@
             position="-2.71264 0.224 -0.06844"
           ></a-video>
         </a-entity>
+
       </a-entity>
 
       <a-entity
@@ -807,7 +808,6 @@
     </a-entity>
   </a-entity>
 
-  <!-- target: #target; -->
   <a-entity
   id="rig"
     velocity="0 -2.862580000059097 0"
@@ -816,7 +816,6 @@
     movement-controls="fly: false; speed: 0.5"
     kinematic-body
     position="0 0 7.999671852158966e-17">
-    <!-- mouse-cursor -->
     <a-entity
       camara
       id="cam"
@@ -826,8 +825,6 @@
       animation__zoomin="property:camera.fov;dur:2000;to:50;startEvents:zoomin;"
       animation__zoomout="property:camera.fov;dur:1000;to:80;startEvents:zoomout;"
     >
-      <!-- <a-cursor fuse="false" color="#000000"></a-cursor> -->
-
       <a-cursor
         raycaster="objects: .clickeable"
         id="cursor-visual"
@@ -840,7 +837,7 @@
         animation__mouseleave="property: geometry.thetaLength; dir: alternate; dur: 500;
                   easing: easeInSine; to: 0;startEvents:stopFuse;autoplay:false"
       >
-        <!-- <a-entity geometry="primitive:ring;radiusOuter:0.025;radiusInner:0.015" material="shader:flat;color:#000000"></a-entity> -->
+
         <a-entity
           geometry="primitive:ring;radiusOuter:0.025;radiusInner:0.015"
           material="shader:flat;color:#000000"

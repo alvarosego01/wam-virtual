@@ -30,7 +30,9 @@
     </ul>
 
   </div>
-  <div class="central">
+  <div
+  style="background-image: url('./assets/files/images/central_begin_portrait.jpg');"
+  class="central">
 
     <div class="advertencia animate__animated " [ngClass]="{'animate__fadeOut': (this.counter.sec >= 5)? true: false }">
       <img src="./assets/files/elements/iconsLogos/Audi.png" alt="">
@@ -41,14 +43,14 @@
     </div>
 
     <div *ngIf="this.counter.sec >= 5" class="logo">
-      <img class="animacionLogoEntrada imgLogo" src="./assets/files/elements/iconsLogos/isotipoPlatinum.png"
+      <img class="animacionLogoEntrada imgLogo" src="./assets/files/elements/iconsLogos/logo_wam_silver.png"
         alt="">
 
 
       <div class="textLogo">
 
         <app-animate-text
-        [titulo]="'Zarzuela por el Mundo'" [subTitulo]="''"
+        [titulo]="'New World Theater VR'" [subTitulo]="''"
         [reveal]="this.letrasLogo"
         [typeTitle]="'textoLogoZarzuela'">
 

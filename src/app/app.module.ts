@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,7 @@ import { PublicModule } from './modules/public/public.module';
 import { GlobalService, SoundsEffectsService, TourService, AframeService } from './services';
 import { PublicComponent } from './modules/public/public.component';
 import { ComponentsModule } from './components/components.module';
+import { AframeModule } from './aframe/aframe.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ComponentsModule } from './components/components.module';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    PublicModule
+    PublicModule,
+    AframeModule
   ],
   providers: [
     GlobalService,
@@ -35,7 +37,7 @@ import { ComponentsModule } from './components/components.module';
   ],
   bootstrap: [AppComponent],
    schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+    CUSTOM_ELEMENTS_SCHEMA,
   ]
 })
 export class AppModule { }

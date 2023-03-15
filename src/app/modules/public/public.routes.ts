@@ -7,6 +7,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { PromoVideoComponent } from './promo-video/promo-video.component';
 import { PublicComponent } from './public.component';
 import { RecorridoComponent } from './recorrido/recorrido.index';
+import { AframeTestsComponent } from './aframe-tests/aframe-tests.component';
 
 
 
@@ -36,6 +37,11 @@ const publicRoutes: Routes = [
             {
                 path: "principal",
                 component: PrincipalComponent,
+
+            },
+            {
+                path: "3dTest",
+                component: AframeTestsComponent,
 
             },
 

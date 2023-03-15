@@ -1,1 +1,35 @@
-yarn add aframe aframe-camera-events aframe-extras aframe-htmlembed-component aframe-mouse-cursor-component aframe-watcher
+<a-entity position="0 0 0" a_table_stand">
+  <a-entity
+    id="a_table_stand_body"
+    position="0 0 0"
+    rotation="0 0 0"
+  >
+    <a-gltf-model
+      static-body
+      id="a_table_stand_model"
+      static-body="sphereRadius: NaN"
+      rotation="0.002864788975654116 -173.525424875526 0.0005729577951308233"
+      position="0 0 0"
+      scale="1.5 1.5 1.5"
+      src="#_element_kiosko"
+    ></a-gltf-model>
+
+    <a-entity
+      id="a_table_stand_frontal_image_body"
+      scale="1 1 1"
+      position="-0.15358 1.42714 -1.82278"
+    >
+      <a-image
+        position="0 0 0"
+        id="a_table_stand_frontal_image"
+        scale="2 2 2"
+        rotation="0 -174.86557315833699 0"
+        material="src: #logoZarzuelaSquare"
+      ></a-image>
+
+    </a-entity>
+
+  </a-entity>
+
+</a-entity>
+
