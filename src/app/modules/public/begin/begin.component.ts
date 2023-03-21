@@ -98,7 +98,7 @@ export class BeginComponent implements OnInit, OnDestroy {
         let intervalId = setTimeout(async () => {
 
 
-            this.router.navigate(['public/principal']);
+            this.router.navigate(['public/hall']);
 
         }, 1000);
 
