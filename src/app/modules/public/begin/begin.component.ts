@@ -94,7 +94,9 @@ export class BeginComponent implements OnInit, OnDestroy {
 
         // this.activeZone = false;
 
-            window.location.href = '/public/hall';
+            // window.location.href = '/public/hall';
+
+            window.location.replace('https://virtual.wammusic.com/public/hall');
 
         // await setTimeout(async () => {
 
