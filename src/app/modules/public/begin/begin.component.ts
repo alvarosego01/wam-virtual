@@ -90,16 +90,17 @@ export class BeginComponent implements OnInit, OnDestroy {
 
     async goViaje() {
 
-        this.landingPlanet = true;
+        // this.landingPlanet = true;
 
-        this.activeZone = false;
+        // this.activeZone = false;
 
+            window.location.href = '/public/hall';
 
-        await setTimeout(async () => {
+        // await setTimeout(async () => {
 
-            this.router.navigate(['public/hall']);
+        //     this.router.navigate(['public/hall']);
 
-        }, 1000);
+        // }, 1000);
 
 
     }
