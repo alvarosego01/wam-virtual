@@ -34,11 +34,11 @@ const publicRoutes: Routes = [
                 // canActivateChild: [noLoginVerifyGuard],
             },
 
-            {
-                path: "principal",
-                component: PrincipalComponent,
+            // {
+            //     path: "principal",
+            //     component: PrincipalComponent,
 
-            },
+            // },
             {
                 path: "3dTest",
                 component: AframeTestsComponent,

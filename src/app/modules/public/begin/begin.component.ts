@@ -88,15 +88,14 @@ export class BeginComponent implements OnInit, OnDestroy {
     }
 
 
-    goViaje() {
+    async goViaje() {
 
         this.landingPlanet = true;
 
         this.activeZone = false;
 
 
-        let intervalId = setTimeout(async () => {
-
+        await setTimeout(async () => {
 
             this.router.navigate(['public/hall']);
 
